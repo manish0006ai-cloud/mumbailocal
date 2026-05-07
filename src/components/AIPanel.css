@@ -1,0 +1,121 @@
+.ai-panel {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(167, 139, 250, 0.04));
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  animation: slide-up 0.5s ease;
+}
+
+.ai-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+.ai-panel-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.ai-panel-title h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ai-sparkle {
+  font-size: 1.1rem;
+  animation: float 3s ease infinite;
+}
+
+.ai-chevron {
+  color: var(--text-tertiary);
+  transition: transform var(--transition-base);
+}
+
+.ai-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.ai-panel-body {
+  padding: 0 var(--space-lg) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.ai-insight {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  animation: slide-up 0.4s ease both;
+}
+
+.ai-insight-recommendation {
+  border-left: 3px solid var(--accent-cyan);
+}
+
+.ai-insight-crowd {
+  border-left: 3px solid var(--accent-purple);
+}
+
+.ai-insight-warning {
+  border-left: 3px solid var(--accent-orange);
+}
+
+.ai-insight-alert {
+  border-left: 3px solid var(--accent-red);
+}
+
+.ai-insight-info {
+  border-left: 3px solid var(--accent-blue);
+}
+
+.ai-insight-tip {
+  border-left: 3px solid var(--accent-green);
+}
+
+.ai-insight-interchange {
+  border-left: 3px solid var(--accent-yellow);
+}
+
+.insight-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.insight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.insight-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.insight-message {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
