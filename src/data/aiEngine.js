@@ -1,5 +1,4 @@
 import { getStation, getStationsOnLine, findRoute, LINES, getLineInfo } from './stations';
-import { generateTrains } from './trainGenerator';
 
 // AI Recommendation Engine for Mumbai Local Trains
 // Provides intelligent suggestions based on train data and conditions
@@ -97,7 +96,7 @@ export function getTrainBadges(trains) {
 }
 
 // Generate AI insight messages
-export function generateInsights(trains, source, destination) {
+export function generateInsights(trains, source, destination, generateTrainsFn) {
   const insights = [];
   if (!trains || trains.length === 0) return insights;
   
@@ -195,8 +194,8 @@ export function generateInsights(trains, source, destination) {
     arrDate.setHours(arrH, arrM + 5, 0); // 5 min buffer for platform change
     
     // Find next connecting trains from interchange to final destination
-    if (route.interchange && route.destId) {
-      const connections = generateTrains(route.interchange.id, route.destId, 5);
+    if (route.interchange && route.destId && generateTrainsFn) {
+      const connections = generateTrainsFn(route.interchange.id, route.destId, 5);
       const nextConnection = connections.find(c => {
         const [depH, depM] = c.departureTime.split(':').map(Number);
         const depDate = new Date();
