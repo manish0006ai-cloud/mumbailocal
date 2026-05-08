@@ -209,6 +209,49 @@ export function findRoute(sourceId, destId) {
   }
 
   // Build the route segments
+  if (interchange.via) {
+    // 3-segment route (e.g. WR -> CR -> TH)
+    const seg1 = findRoute(sourceId, interchange.sourceId);
+    
+    // Middle segment (e.g. Dadar CR to Thane CR)
+    // We need to find the correct IDs for the middle line
+    let midSrcId, midDestId;
+    if (interchange.via === 'central') {
+      midSrcId = 'ddr'; 
+      midDestId = 'tna';
+    } else {
+      midSrcId = interchange.sourceId;
+      midDestId = interchange.destId;
+    }
+    
+    const seg2 = findRoute(midSrcId, midDestId);
+    const seg3 = findRoute(interchange.destId, destId);
+
+    const totalStops = (seg1?.stops || 5) + (seg2?.stops || 5) + (seg3?.stops || 5);
+    const allStations = [
+      ...(seg1?.stations || []),
+      ...(seg2?.stations || []),
+      ...(seg3?.stations || [])
+    ];
+
+    return {
+      type: 'interchange',
+      line: source.line,
+      line2: interchange.via,
+      line3: dest.line,
+      stations: allStations,
+      stops: totalStops,
+      interchange: {
+        station: interchange.name,
+        id: interchange.sourceId,
+        id2: interchange.destId,
+        name: interchange.name,
+        isMulti: true
+      },
+      destId: destId
+    };
+  }
+
   const seg1 = findRoute(sourceId, interchange.sourceId);
   const seg2Src = interchange.destId || interchange.sourceId;
   const seg2 = findRoute(seg2Src, destId);

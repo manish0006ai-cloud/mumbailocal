@@ -202,6 +202,17 @@ export async function generateInsights(trains, source, destination, generateTrai
       
       const connections = await generateTrainsFn(route.interchange.id, route.destId, 5, arrivalDate);
       const nextConnection = connections[0]; // First train after buffer
+      
+      // If 2 interchanges exist (3-leg route)
+      let thirdLeg = null;
+      if (route.interchange.isMulti && route.interchange.id2 && nextConnection) {
+        const [arrH2, arrM2] = nextConnection.arrivalTime.split(':').map(Number);
+        const arrivalDate2 = new Date();
+        arrivalDate2.setHours(arrH2, arrM2 + 7, 0, 0);
+        
+        const connections2 = await generateTrainsFn(route.interchange.id2, route.destId, 5, arrivalDate2);
+        thirdLeg = connections2[0];
+      }
 
       insights.push({
         type: 'interchange',
@@ -211,7 +222,8 @@ export async function generateInsights(trains, source, destination, generateTrai
           ? `Change at ${route.interchange.station}. After arriving, catch the ${nextConnection.departureTime} ${nextConnection.type} train to your destination.`
           : `Change at ${route.interchange.station}. Check local indicators for the next connection to your destination.`,
         priority: 0,
-        connection: nextConnection
+        connection: nextConnection,
+        connection2: thirdLeg
       });
     }
   }

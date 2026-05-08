@@ -233,20 +233,32 @@ export default function HeroTrainCard({ train, badge, insights = [] }) {
               <div className="step-marker">2</div>
               <div className="step-text">
                 {interchangeInsight.connection ? (
-                  <>Catch the <span className="highlight">{interchangeInsight.connection.departureTime} {interchangeInsight.connection.type}</span> train to <span className="highlight">{train.finalDestination || 'your destination'}</span>.</>
+                  <>Catch the <span className="highlight">{interchangeInsight.connection.departureTime} {interchangeInsight.connection.type}</span> train to <span className="highlight">{interchangeInsight.connection2 ? interchangeInsight.connection.destination : (train.finalDestination || 'your destination')}</span>.</>
                 ) : (
                   <>Check indicators for the next train to <span className="highlight">{train.finalDestination || 'your destination'}</span>.</>
                 )}
               </div>
             </div>
+            
+            {interchangeInsight.connection2 && (
+              <>
+                <div className="interchange-connector-v"></div>
+                <div className="interchange-step">
+                  <div className="step-marker">3</div>
+                  <div className="step-text">
+                    Catch the <span className="highlight">{interchangeInsight.connection2.departureTime} {interchangeInsight.connection2.type}</span> train to <span className="highlight">{train.finalDestination}</span>.
+                  </div>
+                </div>
+              </>
+            )}
           </div>
           
-          {/* Connecting Train Tracker */}
+          {/* Connecting Train Tracker - Leg 2 */}
           {interchangeInsight.connection && (
             <div className="hero-route connection-route">
               <div className="hero-station">
                 <span className="hero-time">{interchangeInsight.connection.departureTime}</span>
-                <span className="hero-station-name">{train.destination}</span>
+                <span className="hero-station-name">{interchangeInsight.connection.source}</span>
               </div>
               <div className="hero-arrow">
                 <div className="arrow-line connection-line">
@@ -256,7 +268,27 @@ export default function HeroTrainCard({ train, badge, insights = [] }) {
               </div>
               <div className="hero-station">
                 <span className="hero-time">{interchangeInsight.connection.arrivalTime}</span>
-                <span className="hero-station-name">{train.finalDestination}</span>
+                <span className="hero-station-name">{interchangeInsight.connection.destination}</span>
+              </div>
+            </div>
+          )}
+
+          {/* Connecting Train Tracker - Leg 3 */}
+          {interchangeInsight.connection2 && (
+            <div className="hero-route connection-route leg-3">
+              <div className="hero-station">
+                <span className="hero-time">{interchangeInsight.connection2.departureTime}</span>
+                <span className="hero-station-name">{interchangeInsight.connection2.source}</span>
+              </div>
+              <div className="hero-arrow">
+                <div className="arrow-line connection-line">
+                  <div className="arrow-train-icon">🚆</div>
+                </div>
+                <span className="arrow-duration">{interchangeInsight.connection2.duration} min</span>
+              </div>
+              <div className="hero-station">
+                <span className="hero-time">{interchangeInsight.connection2.arrivalTime}</span>
+                <span className="hero-station-name">{interchangeInsight.connection2.destination}</span>
               </div>
             </div>
           )}
