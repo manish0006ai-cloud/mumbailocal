@@ -246,7 +246,8 @@ export function findRoute(sourceId, destId) {
         id: interchange.sourceId,
         id2: interchange.destId,
         name: interchange.name,
-        isMulti: true
+        isMulti: true,
+        midDestId: midDestId // Track the middle target
       },
       destId: destId
     };

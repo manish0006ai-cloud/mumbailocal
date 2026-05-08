@@ -200,7 +200,9 @@ export async function generateInsights(trains, source, destination, generateTrai
       const arrivalDate = new Date();
       arrivalDate.setHours(arrH, arrM + 7, 0, 0); // 7 min buffer for platform change
       
-      const connections = await generateTrainsFn(route.interchange.id, route.destId, 5, arrivalDate);
+      // For multi-interchange, leg 2 goes to the middle hub (e.g. Thane)
+      const leg2DestId = route.interchange.isMulti ? route.interchange.midDestId : route.destId;
+      const connections = await generateTrainsFn(route.interchange.id, leg2DestId, 5, arrivalDate);
       const nextConnection = connections[0]; // First train after buffer
       
       // If 2 interchanges exist (3-leg route)
