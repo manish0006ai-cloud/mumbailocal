@@ -108,7 +108,13 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     }
     if (baseHour >= 24) baseHour -= 24;
 
-    const isFast = Math.random() > (peak ? 0.4 : 0.6); // More fast trains in peak
+    let isFast = Math.random() > (peak ? 0.4 : 0.6); // More fast trains in peak
+    
+    // Harbour and Trans-Harbour ONLY have slow trains
+    if (source.line === 'harbour' || source.line === 'trans-harbour') {
+      isFast = false;
+    }
+
     const stops = route.stops || 10;
     const travelTime = Math.round(estimateTravelTime(stops, isFast));
     const delay = generateDelay(isFast, baseHour);
