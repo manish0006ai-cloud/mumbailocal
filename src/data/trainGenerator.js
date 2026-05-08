@@ -68,7 +68,7 @@ const FAST_SKIP_WESTERN = ['mr', 'cc', 'gr', 'el', 'mm', 'mhd', 'khr', 'snt', 'v
 const FAST_SKIP_CENTRAL = ['msjd', 'snhst', 'cpr', 'cr', 'vnk', 'vik', 'knp', 'nhr', 'klw', 'mmk', 'tky', 'vtk'];
 
 // Generate train schedule (Async to simulate real API)
-export async function generateTrains(sourceId, destId, count = 12) {
+export async function generateTrains(sourceId, destId, count = 12, baseTime = null) {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 600));
 
@@ -79,7 +79,7 @@ export async function generateTrains(sourceId, destId, count = 12) {
   const route = findRoute(sourceId, destId);
   if (!route) return [];
 
-  const now = new Date();
+  const now = baseTime || new Date();
   const currentHour = now.getHours();
   const currentMinute = now.getMinutes();
   const dayOfWeek = now.getDay();

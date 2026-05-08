@@ -195,13 +195,13 @@ export async function generateInsights(trains, source, destination, generateTrai
     
     // Find next connecting trains from interchange to final destination
     if (route.interchange && route.destId && generateTrainsFn) {
-      const connections = await generateTrainsFn(route.interchange.id, route.destId, 5);
-      const nextConnection = connections.find(c => {
-        const [depH, depM] = c.departureTime.split(':').map(Number);
-        const depDate = new Date();
-        depDate.setHours(depH, depM, 0);
-        return depDate > arrDate;
-      }) || connections[0];
+      const arrTimeStr = firstTrain.arrivalTime; // e.g. "10:30"
+      const [arrH, arrM] = arrTimeStr.split(':').map(Number);
+      const arrivalDate = new Date();
+      arrivalDate.setHours(arrH, arrM + 7, 0, 0); // 7 min buffer for platform change
+      
+      const connections = await generateTrainsFn(route.interchange.id, route.destId, 5, arrivalDate);
+      const nextConnection = connections[0]; // First train after buffer
 
       insights.push({
         type: 'interchange',
