@@ -233,9 +233,9 @@ export default function HeroTrainCard({ train, badge, insights = [] }) {
               <div className="step-marker">2</div>
               <div className="step-text">
                 {interchangeInsight.connection ? (
-                  <>Catch the <span className="highlight">{interchangeInsight.connection.departureTime} {interchangeInsight.connection.type}</span> train to your final destination.</>
+                  <>Catch the <span className="highlight">{interchangeInsight.connection.departureTime} {interchangeInsight.connection.type}</span> train to <span className="highlight">{train.finalDestination || 'your destination'}</span>.</>
                 ) : (
-                  <>Check indicators for the next train to your destination.</>
+                  <>Check indicators for the next train to <span className="highlight">{train.finalDestination || 'your destination'}</span>.</>
                 )}
               </div>
             </div>

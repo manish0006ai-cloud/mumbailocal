@@ -126,10 +126,17 @@ export async function generateTrains(sourceId, destId, count = 12) {
     const depTime = `${String(baseHour).padStart(2, '0')}:${String(baseMinute).padStart(2, '0')}`;
     const arrTime = `${String(arrHour).padStart(2, '0')}:${String(arrMin).padStart(2, '0')}`;
 
+    // Handle interchange destination for the first leg
+    let displayDest = dest;
+    if (route.type === 'interchange' && route.interchange) {
+      const interchangeStation = getStation(route.interchange.id);
+      if (interchangeStation) displayDest = interchangeStation;
+    }
+
     // Direction for platform assignment
     const lineStations = getStationsOnLine(source.line);
     const srcIdx = lineStations.findIndex(s => s.id === sourceId);
-    const dstIdx = lineStations.findIndex(s => s.id === destId);
+    const dstIdx = lineStations.findIndex(s => s.id === displayDest.id);
     const direction = srcIdx < dstIdx ? 'down' : 'up';
 
     const platform = generatePlatform(source, direction);
@@ -147,8 +154,9 @@ export async function generateTrains(sourceId, destId, count = 12) {
       number: `${source.line === 'western' ? 'W' : source.line === 'central' ? 'C' : source.line === 'harbour' ? 'H' : 'T'}${String(Math.floor(Math.random() * 9000) + 1000)}`,
       source: source.name,
       sourceCode: source.code,
-      destination: dest.name,
-      destinationCode: dest.code,
+      destination: displayDest.name,
+      destinationCode: displayDest.code,
+      finalDestination: dest.name, // Keep track of final destination
       line: source.line,
       lineInfo: LINES[source.line.toUpperCase().replace('-', '_')] || LINES.CENTRAL,
       departureTime: depTime,
@@ -163,7 +171,7 @@ export async function generateTrains(sourceId, destId, count = 12) {
       totalStops: stops,
       minsFromNow,
       status: delay > 0 ? (delay > 5 ? 'delayed' : 'slight-delay') : 'on-time',
-      name: `${dest.name} ${isFast ? 'Fast' : 'Slow'}`,
+      name: `${displayDest.name} ${isFast ? 'Fast' : 'Slow'}`,
       seatProbability: crowd === 'low' ? 85 : crowd === 'medium' ? 35 : 5,
       standingProbability: crowd === 'low' ? 15 : crowd === 'medium' ? 65 : 95,
       coachSuggestion: crowd === 'heavy' ? 'First or Last coach recommended' : 'Any coach',
