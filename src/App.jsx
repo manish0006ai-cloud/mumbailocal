@@ -176,9 +176,6 @@ function AppContent() {
             <HeroTrainCard train={heroTrain} badge={badges[heroTrain.id]} insights={insights} />
           )}
 
-          {/* AI Panel */}
-          <AIPanel insights={insights} />
-
           {/* Route Map */}
           {heroTrain?.route && (
             <RouteMap 
@@ -187,6 +184,9 @@ function AppContent() {
               destination={state.destination?.name} 
             />
           )}
+
+          {/* AI Panel */}
+          <AIPanel insights={insights} />
 
           {/* Live Alerts */}
           <LiveAlerts alerts={alerts} />
