@@ -358,6 +358,17 @@
   margin-left: 9px;
 }
 
+.connection-route {
+  margin: var(--space-md) 0 0 0 !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  padding: 12px !important;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.connection-line {
+  background: rgba(34, 211, 238, 0.3) !important;
+}
+
 /* ===== DEPARTED STATE ===== */
 
 .hero-departed {

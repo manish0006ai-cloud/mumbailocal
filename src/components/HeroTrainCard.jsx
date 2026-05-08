@@ -240,6 +240,26 @@ export default function HeroTrainCard({ train, badge, insights = [] }) {
               </div>
             </div>
           </div>
+          
+          {/* Connecting Train Tracker */}
+          {interchangeInsight.connection && (
+            <div className="hero-route connection-route">
+              <div className="hero-station">
+                <span className="hero-time">{interchangeInsight.connection.departureTime}</span>
+                <span className="hero-station-name">{train.destination}</span>
+              </div>
+              <div className="hero-arrow">
+                <div className="arrow-line connection-line">
+                  <div className="arrow-train-icon">🚆</div>
+                </div>
+                <span className="arrow-duration">{interchangeInsight.connection.duration} min</span>
+              </div>
+              <div className="hero-station">
+                <span className="hero-time">{interchangeInsight.connection.arrivalTime}</span>
+                <span className="hero-station-name">{train.finalDestination}</span>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
