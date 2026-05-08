@@ -1,3 +1,5 @@
+import { getStation, getStationsOnLine, findRoute, LINES, getLineInfo } from './stations';
+
 // AI Recommendation Engine for Mumbai Local Trains
 // Provides intelligent suggestions based on train data and conditions
 
@@ -94,7 +96,7 @@ export function getTrainBadges(trains) {
 }
 
 // Generate AI insight messages
-export function generateInsights(trains, source, destination) {
+export function generateInsights(trains, source, destination, generateTrainsFn) {
   const insights = [];
   if (!trains || trains.length === 0) return insights;
   
@@ -181,13 +183,37 @@ export function generateInsights(trains, source, destination) {
   
   // Interchange guidance
   if (trains[0]?.route?.type === 'interchange') {
-    insights.push({
-      type: 'interchange',
-      icon: '🔄',
-      title: 'Interchange Required',
-      message: `${trains[0].route.interchange.note}. Allow 3-5 mins for platform change.`,
-      priority: 2
-    });
+    const route = trains[0].route;
+    const firstTrain = trains[0];
+    
+    // Calculate connecting train
+    // First train arrives at interchange after 'duration' mins
+    const arrTimeStr = firstTrain.arrivalTime; // e.g. "10:30"
+    const [arrH, arrM] = arrTimeStr.split(':').map(Number);
+    const arrDate = new Date();
+    arrDate.setHours(arrH, arrM + 5, 0); // 5 min buffer for platform change
+    
+    // Find next connecting trains from interchange to final destination
+    if (route.interchange && route.destId && generateTrainsFn) {
+      const connections = generateTrainsFn(route.interchange.id, route.destId, 5);
+      const nextConnection = connections.find(c => {
+        const [depH, depM] = c.departureTime.split(':').map(Number);
+        const depDate = new Date();
+        depDate.setHours(depH, depM, 0);
+        return depDate > arrDate;
+      }) || connections[0];
+
+      insights.push({
+        type: 'interchange',
+        icon: '🔄',
+        title: 'Next Catching Train',
+        message: nextConnection 
+          ? `Change at ${route.interchange.station}. After arriving, catch the ${nextConnection.departureTime} ${nextConnection.type} train to your destination.`
+          : `Change at ${route.interchange.station}. Check local indicators for the next connection to your destination.`,
+        priority: 0,
+        connection: nextConnection
+      });
+    }
   }
 
   // Coach suggestion during peak

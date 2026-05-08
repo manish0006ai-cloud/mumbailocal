@@ -114,10 +114,10 @@
 .timeline-bars {
   display: flex;
   align-items: flex-end;
-  gap: 3px;
-  height: 80px;
+  gap: 4px;
+  height: 100px;
   min-width: max-content;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -125,36 +125,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  min-width: 22px;
+  gap: 8px;
+  min-width: 28px;
   position: relative;
   height: 100%;
   justify-content: flex-end;
 }
 
 .timeline-bar {
-  width: 14px;
-  border-radius: 3px 3px 0 0;
+  width: 16px;
+  border-radius: 4px 4px 0 0;
   transition: height 0.5s ease;
   min-height: 2px;
 }
 
 .timeline-bar-wrapper.current .timeline-bar {
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
 }
 
 .timeline-label {
-  font-size: 0.5rem;
-  color: var(--text-muted);
-  font-weight: 500;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  font-weight: 600;
   white-space: nowrap;
   position: absolute;
-  bottom: 0;
+  bottom: 4px;
 }
 
 .timeline-bar-wrapper.current .timeline-label {
   color: var(--accent-cyan);
-  font-weight: 700;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
 }
 
 .timeline-now-dot {

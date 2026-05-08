@@ -129,6 +129,27 @@
   font-size: 0.9rem;
 }
 
+.route-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.route-code {
+  font-size: 1.1rem;
+}
+
+.route-line-tag {
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: var(--text-tertiary);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-top: 2px;
+}
+
 .save-route-btn {
   width: 40px;
   height: 40px;
@@ -160,4 +181,14 @@
 .refresh-btn {
   gap: 8px;
   font-size: 0.8rem;
+}
+
+.version-indicator {
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  padding: var(--space-lg) 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
 }

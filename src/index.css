@@ -326,6 +326,13 @@ body::before {
   animation: pulse-glow 3s infinite;
 }
 
+.badge-interchange {
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  color: var(--accent-purple);
+  animation: pulse-glow 4s infinite;
+}
+
 .badge-crowd-low {
   background: rgba(52, 211, 153, 0.12);
   color: var(--crowd-low);

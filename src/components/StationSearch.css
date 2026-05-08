@@ -146,6 +146,16 @@
   top: 170px;
 }
 
+.dropdown-label {
+  padding: 10px 14px 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
 .autocomplete-item {
   display: flex;
   align-items: center;

@@ -15,6 +15,12 @@ import './App.css';
 
 function AppContent() {
   const { state, dispatch } = useApp();
+  
+  // Safety check for context
+  if (!state || !dispatch) {
+    return <div style={{ color: 'white', padding: '20px' }}>Error: App Context not found. Please refresh.</div>;
+  }
+
   const [trains, setTrains] = useState([]);
   const [insights, setInsights] = useState([]);
   const [badges, setBadges] = useState({});
@@ -26,7 +32,7 @@ function AppContent() {
     const generatedTrains = generateTrains(source.id, destination.id, 12);
     setTrains(generatedTrains);
     
-    const generatedInsights = generateInsights(generatedTrains, source.name, destination.name);
+    const generatedInsights = generateInsights(generatedTrains, source.name, destination.name, generateTrains);
     setInsights(generatedInsights);
     
     const generatedBadges = getTrainBadges(generatedTrains);
@@ -121,9 +127,15 @@ function AppContent() {
               <span>Back</span>
             </button>
             <div className="results-route-label">
-              <span>{state.source?.code}</span>
+              <div className="route-node">
+                <span className="route-code">{state.source?.code}</span>
+                <span className="route-line-tag">{state.source?.line === 'western' ? 'WR' : state.source?.line === 'central' ? 'CR' : state.source?.line === 'harbour' ? 'HR' : 'TH'}</span>
+              </div>
               <span className="route-separator">→</span>
-              <span>{state.destination?.code}</span>
+              <div className="route-node">
+                <span className="route-code">{state.destination?.code}</span>
+                <span className="route-line-tag">{state.destination?.line === 'western' ? 'WR' : state.destination?.line === 'central' ? 'CR' : state.destination?.line === 'harbour' ? 'HR' : 'TH'}</span>
+              </div>
             </div>
             <button className="save-route-btn" onClick={handleSaveRoute} title="Save route" id="save-route-btn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -169,7 +181,7 @@ function AppContent() {
           {/* Crowd Prediction */}
           {heroTrain && <CrowdPrediction train={heroTrain} />}
           
-
+          <div className="version-indicator">v2.0 Interchange Active</div>
         </main>
       )}
     </div>

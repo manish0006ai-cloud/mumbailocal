@@ -168,6 +168,9 @@ export default function HeroTrainCard({ train, badge }) {
           <span className={`badge ${train.isFast ? 'badge-fast' : 'badge-slow'}`}>
             {train.isFast ? '⚡ FAST' : '🔵 SLOW'}
           </span>
+          {train.route?.type === 'interchange' && !departed && (
+            <span className="badge badge-interchange">🔄 INTERCHANGE</span>
+          )}
           {badge && !departed && <span className="badge badge-ai">✨ {badge}</span>}
         </div>
       </div>

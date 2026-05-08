@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { useApp } from '../context/AppContext';
 import { searchStations, getStation, popularStations, getLineInfo } from '../data/stations';
 import { parseVoiceQuery } from '../data/aiEngine';
@@ -16,24 +16,40 @@ export default function StationSearch({ onSearch }) {
   const destRef = useRef(null);
   const recognitionRef = useRef(null);
 
+  // FIXED: Moved BEFORE useEffect hooks and wrapped in useMemo to prevent
+  // infinite re-render loops (previously caused TDZ crash + new array ref every render)
+  const popularStationsList = useMemo(() => {
+    return popularStations.slice(0, 8).map(id => getStation(id)).filter(Boolean);
+  }, []);
+
   // Search stations on query change
   useEffect(() => {
-    if (activeField === 'source' && sourceQuery.length > 0) {
-      setSourceResults(searchStations(sourceQuery));
+    if (activeField === 'source') {
+      if (sourceQuery.length > 0) {
+        setSourceResults(searchStations(sourceQuery));
+      } else {
+        // Show popular stations if empty but focused
+        setSourceResults(popularStationsList);
+      }
     } else {
       setSourceResults([]);
     }
-  }, [sourceQuery, activeField]);
+  }, [sourceQuery, activeField, popularStationsList]);
 
   useEffect(() => {
-    if (activeField === 'dest' && destQuery.length > 0) {
-      setDestResults(searchStations(destQuery));
+    if (activeField === 'dest') {
+      if (destQuery.length > 0) {
+        setDestResults(searchStations(destQuery));
+      } else {
+        // Show popular stations if empty but focused
+        setDestResults(popularStationsList);
+      }
     } else {
       setDestResults([]);
     }
-  }, [destQuery, activeField]);
+  }, [destQuery, activeField, popularStationsList]);
 
-  const selectStation = (station, field) => {
+  const selectStation = useCallback((station, field) => {
     if (field === 'source') {
       dispatch({ type: 'SET_SOURCE', payload: station });
       setSourceQuery(station.name);
@@ -47,7 +63,7 @@ export default function StationSearch({ onSearch }) {
       setDestResults([]);
       setActiveField(null);
     }
-  };
+  }, [dispatch]);
 
   const handleSwap = () => {
     dispatch({ type: 'SWAP_STATIONS' });
@@ -56,12 +72,12 @@ export default function StationSearch({ onSearch }) {
     setDestQuery(tempQuery);
   };
 
-  const handleSearch = () => {
+  const handleSearch = useCallback(() => {
     if (state.source && state.destination) {
       dispatch({ type: 'ADD_LAST_SEARCH', payload: { source: state.source, destination: state.destination } });
       onSearch();
     }
-  };
+  }, [state.source, state.destination, dispatch, onSearch]);
 
   const handlePopularStation = (stationId, field) => {
     const station = getStation(stationId);
@@ -104,7 +120,7 @@ export default function StationSearch({ onSearch }) {
     recognition.onerror = () => setIsListening(false);
     recognition.start();
     recognitionRef.current = recognition;
-  }, []);
+  }, [selectStation, handleSearch]);
 
   const getLineColor = (lineId) => {
     const info = getLineInfo(lineId);
@@ -115,8 +131,6 @@ export default function StationSearch({ onSearch }) {
     const info = getLineInfo(lineId);
     return info?.shortName || '';
   };
-
-  const popularStationsList = popularStations.slice(0, 8).map(id => getStation(id)).filter(Boolean);
 
   return (
     <div className="station-search">
@@ -188,6 +202,7 @@ export default function StationSearch({ onSearch }) {
           {/* Autocomplete Dropdowns */}
           {activeField === 'source' && sourceResults.length > 0 && (
             <div className="autocomplete-dropdown source-dropdown">
+              {sourceQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
               {sourceResults.map(station => (
                 <button
                   key={station.id}
@@ -206,6 +221,7 @@ export default function StationSearch({ onSearch }) {
 
           {activeField === 'dest' && destResults.length > 0 && (
             <div className="autocomplete-dropdown dest-dropdown">
+              {destQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
               {destResults.map(station => (
                 <button
                   key={station.id}
@@ -257,8 +273,8 @@ export default function StationSearch({ onSearch }) {
         </div>
       </div>
 
-      {/* Popular Stations */}
-      {!state.source && !state.destination && (
+      {/* Popular Stations (show if one field is empty and not focused) */}
+      {(!state.source || !state.destination) && activeField === null && (
         <div className="popular-stations">
           <p className="popular-label">Popular Stations</p>
           <div className="popular-chips">

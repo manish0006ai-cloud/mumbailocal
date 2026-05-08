@@ -130,8 +130,10 @@ export function searchStations(query) {
   const q = query.toLowerCase().trim();
   
   return stations.filter(s => {
+    const lineSuffix = s.line === 'western' ? 'WR' : s.line === 'central' ? 'CR' : s.line === 'harbour' ? 'HR' : 'TH';
     return (
       s.name.toLowerCase().includes(q) ||
+      `${s.name} (${lineSuffix})`.toLowerCase().includes(q) ||
       s.code.toLowerCase().includes(q) ||
       s.id.toLowerCase().includes(q)
     );
@@ -177,18 +179,18 @@ export function findRoute(sourceId, destId) {
 
   // Different lines — find interchange
   const interchangeMap = {
-    'western-central': { station: 'Dadar', sourceId: 'dp', destId: 'ddr' },
-    'central-western': { station: 'Dadar', sourceId: 'ddr', destId: 'dp' },
-    'western-harbour': { station: 'Bandra', sourceId: 'ba', destId: 'h_kla' },
-    'harbour-western': { station: 'Kurla', sourceId: 'h_kla', destId: 'ba' },
-    'central-harbour': { station: 'Kurla', sourceId: 'kla', destId: 'h_kla' },
-    'harbour-central': { station: 'Kurla', sourceId: 'h_kla', destId: 'kla' },
-    'central-trans-harbour': { station: 'Thane', sourceId: 'tna', destId: 'th_tna' },
-    'trans-harbour-central': { station: 'Thane', sourceId: 'th_tna', destId: 'tna' },
-    'harbour-trans-harbour': { station: 'Vashi', sourceId: 'h_vsh', destId: 'th_vsh' },
-    'trans-harbour-harbour': { station: 'Vashi', sourceId: 'th_vsh', destId: 'h_vsh' },
-    'western-trans-harbour': { station: 'Dadar+Thane', sourceId: 'dp', destId: 'th_tna', via: 'central' },
-    'trans-harbour-western': { station: 'Thane+Dadar', sourceId: 'th_tna', destId: 'dp', via: 'central' },
+    'western-central': { station: 'Dadar', sourceId: 'dp', destId: 'ddr', name: 'Dadar' },
+    'central-western': { station: 'Dadar', sourceId: 'ddr', destId: 'dp', name: 'Dadar' },
+    'western-harbour': { station: 'Bandra', sourceId: 'ba', destId: 'h_kla', name: 'Bandra/Kurla' },
+    'harbour-western': { station: 'Kurla', sourceId: 'h_kla', destId: 'ba', name: 'Kurla/Bandra' },
+    'central-harbour': { station: 'Kurla', sourceId: 'kla', destId: 'h_kla', name: 'Kurla' },
+    'harbour-central': { station: 'Kurla', sourceId: 'h_kla', destId: 'kla', name: 'Kurla' },
+    'central-trans-harbour': { station: 'Thane', sourceId: 'tna', destId: 'th_tna', name: 'Thane' },
+    'trans-harbour-central': { station: 'Thane', sourceId: 'th_tna', destId: 'tna', name: 'Thane' },
+    'harbour-trans-harbour': { station: 'Vashi', sourceId: 'h_vsh', destId: 'th_vsh', name: 'Vashi' },
+    'trans-harbour-harbour': { station: 'Vashi', sourceId: 'th_vsh', destId: 'h_vsh', name: 'Vashi' },
+    'western-trans-harbour': { station: 'Dadar+Thane', sourceId: 'dp', destId: 'th_tna', via: 'central', name: 'Dadar & Thane' },
+    'trans-harbour-western': { station: 'Thane+Dadar', sourceId: 'th_tna', destId: 'dp', via: 'central', name: 'Thane & Dadar' },
   };
 
   const key = `${source.line}-${dest.line}`;
@@ -224,8 +226,10 @@ export function findRoute(sourceId, destId) {
     stations: allStations,
     stops: totalStops,
     interchange: {
-      station: interchange.station,
-      note: `Change at ${interchange.station}`
-    }
+      station: interchange.name,
+      id: interchange.destId || interchange.sourceId,
+      note: `Change at ${interchange.name}`
+    },
+    destId: destId
   };
 }
