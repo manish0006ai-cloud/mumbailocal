@@ -369,9 +369,21 @@
   background: rgba(34, 211, 238, 0.3) !important;
 }
 
-.leg-3 {
-  background: rgba(255, 255, 255, 0.05) !important;
-  margin-top: 8px !important;
+.hero-interchange-guide {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.hero-interchange-guide::-webkit-scrollbar {
+  width: 4px;
+}
+
+.hero-interchange-guide::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 /* ===== DEPARTED STATE ===== */
