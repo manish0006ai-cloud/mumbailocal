@@ -7,6 +7,7 @@
   padding: var(--space-lg);
   margin-bottom: var(--space-lg);
   animation: slide-up 0.5s ease;
+  overflow: hidden;
 }
 
 .route-map-header {
@@ -18,9 +19,10 @@
 
 .route-map-title {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
+  letter-spacing: 0.02em;
 }
 
 .route-map-meta {
@@ -30,57 +32,115 @@
 }
 
 .route-stops {
-  font-size: 0.7rem;
-  color: var(--text-tertiary);
-  font-weight: 500;
-  background: var(--bg-tertiary);
-  padding: 3px 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 12px;
   border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .route-interchange-badge {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--accent-yellow);
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.2);
+}
+
+.route-scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-md) 0;
+  margin: 0 calc(-1 * var(--space-lg));
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+.route-scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.route-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
 }
 
 .route-map-visual {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: var(--space-sm) 0;
-  margin: 0 calc(-1 * var(--space-md));
-  padding-left: var(--space-md);
-  padding-right: var(--space-md);
-  scrollbar-width: none;
-}
-
-.route-map-visual::-webkit-scrollbar {
-  display: none;
+  min-width: max-content;
 }
 
 .route-svg {
-  min-width: 100%;
-  height: 80px;
+  height: 120px;
+  display: block;
+}
+
+.station-label {
+  letter-spacing: -0.01em;
+  transition: all 0.3s ease;
+}
+
+.dot-active {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+.route-map-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stopping-legend {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.legend-skip {
+  font-size: 0.6rem;
+  opacity: 0.8;
 }
 
 .route-line-label {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-top: var(--space-md);
-  font-size: 0.72rem;
+  gap: 8px;
+  font-size: 0.75rem;
   color: var(--text-secondary);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .line-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .line-separator {
-  color: var(--text-tertiary);
-  margin: 0 2px;
+  color: var(--text-muted);
+  font-weight: 400;
 }

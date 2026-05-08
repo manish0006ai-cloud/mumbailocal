@@ -182,6 +182,7 @@ function AppContent() {
               route={heroTrain.route} 
               source={state.source?.name} 
               destination={state.destination?.name} 
+              isFast={heroTrain.isFast}
             />
           )}
 
