@@ -64,8 +64,8 @@ function generatePlatform(station, direction) {
 }
 
 // Fast train stopping pattern - skips small stations
-export const FAST_SKIP_WESTERN = ['mr', 'cc', 'gr', 'el', 'mm', 'mhd', 'khr', 'snt', 'vm', 'jgr', 'ram', 'mld', 'knd', 'dhn'];
-export const FAST_SKIP_CENTRAL = ['msjd', 'snhst', 'cpr', 'cr', 'vnk', 'vik', 'knp', 'nhr', 'klw', 'mmk', 'tky', 'vtk'];
+export const FAST_SKIP_WESTERN = ['mel', 'cyr', 'gtr', 'mx', 'lp', 'pbhd', 'mm', 'khar', 'snt', 'vlp', 'jgs', 'ram', 'mld', 'kdv', 'dic'];
+export const FAST_SKIP_CENTRAL = ['msd', 'snrd', 'chp', 'crd', 'pr', 'vvh', 'vk', 'kjm', 'nhr', 'klw', 'mbq', 'tky', 'kop'];
 
 // Generate train schedule (Async to simulate real API)
 export async function generateTrains(sourceId, destId, count = 12, baseTime = null, skipInterchange = false) {
