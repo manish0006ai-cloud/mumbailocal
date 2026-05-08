@@ -67,8 +67,11 @@ function generatePlatform(station, direction) {
 const FAST_SKIP_WESTERN = ['mr', 'cc', 'gr', 'el', 'mm', 'mhd', 'khr', 'snt', 'vm', 'jgr', 'ram', 'mld', 'knd', 'dhn'];
 const FAST_SKIP_CENTRAL = ['msjd', 'snhst', 'cpr', 'cr', 'vnk', 'vik', 'knp', 'nhr', 'klw', 'mmk', 'tky', 'vtk'];
 
-// Generate train schedule
-export function generateTrains(sourceId, destId, count = 12) {
+// Generate train schedule (Async to simulate real API)
+export async function generateTrains(sourceId, destId, count = 12) {
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 600));
+
   const source = getStation(sourceId);
   const dest = getStation(destId);
   if (!source || !dest) return [];
@@ -160,6 +163,7 @@ export function generateTrains(sourceId, destId, count = 12) {
       totalStops: stops,
       minsFromNow,
       status: delay > 0 ? (delay > 5 ? 'delayed' : 'slight-delay') : 'on-time',
+      name: `${dest.name} ${isFast ? 'Fast' : 'Slow'}`,
       seatProbability: crowd === 'low' ? 85 : crowd === 'medium' ? 35 : 5,
       standingProbability: crowd === 'low' ? 15 : crowd === 'medium' ? 65 : 95,
       coachSuggestion: crowd === 'heavy' ? 'First or Last coach recommended' : 'Any coach',

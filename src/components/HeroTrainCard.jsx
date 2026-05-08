@@ -163,6 +163,10 @@ export default function HeroTrainCard({ train, badge }) {
               {departed ? 'Left the station' : train.status === 'on-time' ? 'On Time' : train.status === 'slight-delay' ? `~${train.delay} min delay` : `${train.delay} min delay`}
             </span>
           </div>
+          <div className="hero-train-ident">
+            <span className="hero-train-name">{train.name}</span>
+            <span className="hero-train-number">{train.number}</span>
+          </div>
         </div>
         <div className="hero-badges">
           <span className={`badge ${train.isFast ? 'badge-fast' : 'badge-slow'}`}>

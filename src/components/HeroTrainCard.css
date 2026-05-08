@@ -67,6 +67,28 @@
   color: var(--text-secondary);
 }
 
+.hero-train-ident {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.hero-train-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.hero-train-number {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
 .hero-badges {
   display: flex;
   gap: 6px;

@@ -96,7 +96,7 @@ export function getTrainBadges(trains) {
 }
 
 // Generate AI insight messages
-export function generateInsights(trains, source, destination, generateTrainsFn) {
+export async function generateInsights(trains, source, destination, generateTrainsFn) {
   const insights = [];
   if (!trains || trains.length === 0) return insights;
   
@@ -195,7 +195,7 @@ export function generateInsights(trains, source, destination, generateTrainsFn) 
     
     // Find next connecting trains from interchange to final destination
     if (route.interchange && route.destId && generateTrainsFn) {
-      const connections = generateTrainsFn(route.interchange.id, route.destId, 5);
+      const connections = await generateTrainsFn(route.interchange.id, route.destId, 5);
       const nextConnection = connections.find(c => {
         const [depH, depM] = c.departureTime.split(':').map(Number);
         const depDate = new Date();

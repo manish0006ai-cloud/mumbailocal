@@ -26,23 +26,30 @@ function AppContent() {
   const [badges, setBadges] = useState({});
   const [alerts, setAlerts] = useState([]);
 
-  const performSearch = useCallback((source, destination) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const performSearch = useCallback(async (source, destination) => {
     if (!source || !destination) return;
     
-    const generatedTrains = generateTrains(source.id, destination.id, 12);
-    setTrains(generatedTrains);
-    
-    const generatedInsights = generateInsights(generatedTrains, source.name, destination.name, generateTrains);
-    setInsights(generatedInsights);
-    
-    const generatedBadges = getTrainBadges(generatedTrains);
-    setBadges(generatedBadges);
-    
-    const generatedAlerts = generateAlerts();
-    setAlerts(generatedAlerts);
-    
-    dispatch({ type: 'SET_VIEW', payload: 'results' });
-    dispatch({ type: 'ADD_LAST_SEARCH', payload: { source, destination } });
+    setIsLoading(true);
+    try {
+      const generatedTrains = await generateTrains(source.id, destination.id, 12);
+      setTrains(generatedTrains);
+      
+      const generatedInsights = await generateInsights(generatedTrains, source.name, destination.name, generateTrains);
+      setInsights(generatedInsights);
+      
+      const generatedBadges = getTrainBadges(generatedTrains);
+      setBadges(generatedBadges);
+      
+      const generatedAlerts = generateAlerts();
+      setAlerts(generatedAlerts);
+      
+      dispatch({ type: 'SET_VIEW', payload: 'results' });
+      dispatch({ type: 'ADD_LAST_SEARCH', payload: { source, destination } });
+    } finally {
+      setIsLoading(false);
+    }
   }, [dispatch]);
 
   const handleSearch = useCallback(() => {
@@ -83,6 +90,15 @@ function AppContent() {
   return (
     <div className="app-container">
       <Header />
+
+      {isLoading && (
+        <div className="loading-overlay">
+          <div className="loading-content">
+            <div className="loading-spinner"></div>
+            <p>Pulling Live Data...</p>
+          </div>
+        </div>
+      )}
       
       {state.view === 'home' && (
         <main className="home-view">

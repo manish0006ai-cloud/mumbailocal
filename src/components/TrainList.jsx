@@ -40,6 +40,10 @@ export default function TrainList({ trains, badges }) {
                     </svg>
                     <span className="train-arr-time">{train.arrivalTime}</span>
                   </div>
+                  <div className="train-info-text">
+                    <span className="train-name-display">{train.name}</span>
+                    <span className="train-num-display">{train.number}</span>
+                  </div>
                   <div className="train-badges-row">
                     <span className={`badge-sm ${train.isFast ? 'badge-sm-fast' : 'badge-sm-slow'}`}>
                       {train.isFast ? 'FAST' : 'SLOW'}

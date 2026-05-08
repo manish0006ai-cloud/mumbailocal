@@ -104,6 +104,27 @@
   align-items: center;
 }
 
+.train-info-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.train-name-display {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+.train-num-display {
+  font-size: 0.62rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 .badge-sm {
   padding: 2px 7px;
   border-radius: var(--radius-full);
