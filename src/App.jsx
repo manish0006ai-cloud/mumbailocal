@@ -32,7 +32,7 @@ function AppContent() {
     const generatedTrains = generateTrains(source.id, destination.id, 12);
     setTrains(generatedTrains);
     
-    const generatedInsights = generateInsights(generatedTrains, source.name, destination.name);
+    const generatedInsights = generateInsights(generatedTrains, source.name, destination.name, generateTrains);
     setInsights(generatedInsights);
     
     const generatedBadges = getTrainBadges(generatedTrains);
