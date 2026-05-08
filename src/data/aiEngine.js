@@ -202,7 +202,7 @@ export async function generateInsights(trains, source, destination, generateTrai
       
       // For multi-interchange, leg 2 goes to the middle hub (e.g. Thane)
       const leg2DestId = route.interchange.isMulti ? route.interchange.midDestId : route.destId;
-      const connections = await generateTrainsFn(route.interchange.id, leg2DestId, 5, arrivalDate);
+      const connections = await generateTrainsFn(route.interchange.id, leg2DestId, 5, arrivalDate, true);
       const nextConnection = connections[0]; // First train after buffer
       
       // If 2 interchanges exist (3-leg route)
@@ -212,7 +212,7 @@ export async function generateInsights(trains, source, destination, generateTrai
         const arrivalDate2 = new Date();
         arrivalDate2.setHours(arrH2, arrM2 + 7, 0, 0);
         
-        const connections2 = await generateTrainsFn(route.interchange.id2, route.destId, 5, arrivalDate2);
+        const connections2 = await generateTrainsFn(route.interchange.id2, route.destId, 5, arrivalDate2, true);
         thirdLeg = connections2[0];
       }
 

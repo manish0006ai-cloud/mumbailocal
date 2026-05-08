@@ -68,7 +68,7 @@ export const FAST_SKIP_WESTERN = ['mr', 'cc', 'gr', 'el', 'mm', 'mhd', 'khr', 's
 export const FAST_SKIP_CENTRAL = ['msjd', 'snhst', 'cpr', 'cr', 'vnk', 'vik', 'knp', 'nhr', 'klw', 'mmk', 'tky', 'vtk'];
 
 // Generate train schedule (Async to simulate real API)
-export async function generateTrains(sourceId, destId, count = 12, baseTime = null) {
+export async function generateTrains(sourceId, destId, count = 12, baseTime = null, skipInterchange = false) {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 600));
 
@@ -127,10 +127,8 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     const arrTime = `${String(arrHour).padStart(2, '0')}:${String(arrMin).padStart(2, '0')}`;
 
     // Determine the immediate destination for this segment
-    // If it's an interchange journey, we only want to show the interchange station as the destination
-    // for the very first train in the list.
     let displayDest = dest;
-    if (i === 0 && route.type === 'interchange' && route.interchange && route.interchange.id) {
+    if (!skipInterchange && i === 0 && route.type === 'interchange' && route.interchange && route.interchange.id) {
       const interchangeStation = getStation(route.interchange.id);
       if (interchangeStation) displayDest = interchangeStation;
     }
