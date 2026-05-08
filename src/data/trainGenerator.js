@@ -126,11 +126,11 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     const depTime = `${String(baseHour).padStart(2, '0')}:${String(baseMinute).padStart(2, '0')}`;
     const arrTime = `${String(arrHour).padStart(2, '0')}:${String(arrMin).padStart(2, '0')}`;
 
-    // Handle interchange destination logic
+    // Determine the immediate destination for this segment
+    // If it's an interchange journey, we only want to show the interchange station as the destination
+    // for the very first train in the list.
     let displayDest = dest;
-    // If we're on a multi-leg journey, the route might suggest an interchange
-    // But we only want to divert if it's the immediate first segment of a larger trip
-    if (route.interchange && route.interchange.id !== sourceId) {
+    if (i === 0 && route.type === 'interchange' && route.interchange && route.interchange.id) {
       const interchangeStation = getStation(route.interchange.id);
       if (interchangeStation) displayDest = interchangeStation;
     }

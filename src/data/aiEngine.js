@@ -218,12 +218,10 @@ export async function generateInsights(trains, source, destination, generateTrai
 
       insights.push({
         type: 'interchange',
-        icon: '🔄',
-        title: 'Next Catching Train',
-        message: nextConnection 
-          ? `Change at ${route.interchange.station}. After arriving, catch the ${nextConnection.departureTime} ${nextConnection.type} train to your destination.`
-          : `Change at ${route.interchange.station}. Check local indicators for the next connection to your destination.`,
-        priority: 0,
+        priority: 1,
+        text: route.interchange.isMulti 
+          ? `Change at Dadar to Central Line, then at Thane to Trans-Harbour Line. Catch the ${nextConnection?.departureTime} train.`
+          : `Change at ${route.interchange.name}. Catch the ${nextConnection?.departureTime} ${nextConnection?.type} train.`,
         connection: nextConnection,
         connection2: thirdLeg
       });
