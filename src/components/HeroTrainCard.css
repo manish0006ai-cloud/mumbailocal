@@ -475,6 +475,19 @@
 .track-rail-top { bottom: 13px; }
 .track-rail-bottom { bottom: 3px; }
 
+.source-pill {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pill-icon {
+  margin-right: 4px;
+}
+
 /* ===== TRAIN PARTS — Each animates independently ===== */
 .train-part {
   position: absolute;

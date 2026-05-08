@@ -155,6 +155,9 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     depDate.setHours(baseHour, baseMinute, 0, 0);
     const minsFromNow = Math.max(0, Math.round((depDate - now) / 60000));
 
+    const sources = ['NTES (Official)', 'mIndicator (Community)', 'Yatri (Live)', 'IRCTC Feed'];
+    const dataSource = sources[Math.floor(Math.random() * sources.length)];
+
     trains.push({
       id: `train_${i}_${Date.now()}`,
       number: `9${source.line === 'western' ? '0' : source.line === 'central' ? '5' : source.line === 'harbour' ? '8' : '7'}${Math.floor(Math.random() * 900) + 100}`,
@@ -182,6 +185,7 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
       standingProbability: crowd === 'low' ? 15 : crowd === 'medium' ? 65 : 95,
       coachSuggestion: crowd === 'heavy' ? 'First or Last coach recommended' : 'Any coach',
       route: route,
+      dataSource: dataSource // New field to simulate pulling from real sources
     });
   }
 
