@@ -15,6 +15,12 @@ import './App.css';
 
 function AppContent() {
   const { state, dispatch } = useApp();
+  
+  // Safety check for context
+  if (!state || !dispatch) {
+    return <div style={{ color: 'white', padding: '20px' }}>Error: App Context not found. Please refresh.</div>;
+  }
+
   const [trains, setTrains] = useState([]);
   const [insights, setInsights] = useState([]);
   const [badges, setBadges] = useState({});
