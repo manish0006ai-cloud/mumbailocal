@@ -2,9 +2,14 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { getCountdownText } from '../data/trainGenerator';
 import './HeroTrainCard.css';
 
-export default function HeroTrainCard({ train, badge }) {
+export default function HeroTrainCard({ train, badge, insights = [] }) {
   const [now, setNow] = useState(Date.now());
   const [departed, setDeparted] = useState(false);
+  
+  // Find interchange info if it exists
+  const interchangeInsight = useMemo(() => {
+    return insights.find(i => i.type === 'interchange');
+  }, [insights]);
   
   // The target departure time = when this train was loaded + minsFromNow offset
   // We use a ref so it survives re-renders but can be reset on train change
@@ -210,6 +215,33 @@ export default function HeroTrainCard({ train, badge }) {
           <span className="hero-station-name">{train.destination}</span>
         </div>
       </div>
+
+      {/* Interchange Guide Section */}
+      {interchangeInsight && !departed && (
+        <div className="hero-interchange-guide">
+          <div className="interchange-header">
+            <span className="interchange-icon">🔄</span>
+            <span className="interchange-title">Interchange Guide</span>
+          </div>
+          <div className="interchange-content">
+            <div className="interchange-step">
+              <div className="step-marker">1</div>
+              <div className="step-text">Get off at <span className="highlight">{train.destination}</span></div>
+            </div>
+            <div className="interchange-connector-v"></div>
+            <div className="interchange-step">
+              <div className="step-marker">2</div>
+              <div className="step-text">
+                {interchangeInsight.connection ? (
+                  <>Catch the <span className="highlight">{interchangeInsight.connection.departureTime} {interchangeInsight.connection.type}</span> train to your final destination.</>
+                ) : (
+                  <>Check indicators for the next train to your destination.</>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Bottom Info */}
       <div className="hero-footer">

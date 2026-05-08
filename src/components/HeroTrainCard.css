@@ -283,6 +283,81 @@
   box-shadow: 0 0 8px rgba(52, 211, 153, 0.3);
 }
 
+/* Interchange Guide */
+.hero-interchange-guide {
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  background: rgba(34, 211, 238, 0.05);
+  border: 1px dashed rgba(34, 211, 238, 0.2);
+  border-radius: var(--radius-md);
+  animation: fade-in 0.5s ease;
+}
+
+.interchange-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.interchange-icon {
+  font-size: 1rem;
+}
+
+.interchange-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.interchange-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.interchange-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.step-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  color: var(--bg-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+}
+
+.step-text {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.highlight {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.interchange-connector-v {
+  width: 1px;
+  height: 12px;
+  background: rgba(34, 211, 238, 0.2);
+  margin-left: 9px;
+}
+
 /* ===== DEPARTED STATE ===== */
 
 .hero-departed {

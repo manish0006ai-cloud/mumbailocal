@@ -173,7 +173,7 @@ function AppContent() {
 
           {/* Hero Train Card */}
           {heroTrain && (
-            <HeroTrainCard train={heroTrain} badge={badges[heroTrain.id]} />
+            <HeroTrainCard train={heroTrain} badge={badges[heroTrain.id]} insights={insights} />
           )}
 
           {/* AI Panel */}
