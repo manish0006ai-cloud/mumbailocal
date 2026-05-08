@@ -151,7 +151,7 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
 
     trains.push({
       id: `train_${i}_${Date.now()}`,
-      number: `${source.line === 'western' ? 'W' : source.line === 'central' ? 'C' : source.line === 'harbour' ? 'H' : 'T'}${String(Math.floor(Math.random() * 9000) + 1000)}`,
+      number: `9${source.line === 'western' ? '0' : source.line === 'central' ? '5' : source.line === 'harbour' ? '8' : '7'}${Math.floor(Math.random() * 900) + 100}`,
       source: source.name,
       sourceCode: source.code,
       destination: displayDest.name,
