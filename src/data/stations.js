@@ -109,6 +109,12 @@ export const stations = [
   { id: 'th_swd', name: 'Sanpada', code: 'SPD', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 245 },
   { id: 'th_vsh', name: 'Vashi', code: 'VSH', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 220 },
   { id: 'th_nrl', name: 'Nerul', code: 'NRL', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 195 },
+  { id: 'th_swd2', name: 'Seawoods Darave', code: 'SWD', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 170 },
+  { id: 'th_cbd', name: 'CBD Belapur', code: 'CBD', line: 'trans-harbour', platforms: 4, interchange: ['harbour'], x: 350, y: 145 },
+  { id: 'th_kpr', name: 'Kharghar', code: 'KPR', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 120 },
+  { id: 'th_mnsr', name: 'Mansarovar', code: 'MSR', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 95 },
+  { id: 'th_knj', name: 'Khandeshwar', code: 'KHS', line: 'trans-harbour', platforms: 2, interchange: ['harbour'], x: 350, y: 70 },
+  { id: 'th_pnl', name: 'Panvel', code: 'PNL', line: 'trans-harbour', platforms: 6, interchange: ['harbour'], x: 350, y: 45 },
 ];
 
 // Popular stations for quick selection
@@ -177,7 +183,18 @@ export function findRoute(sourceId, destId) {
     };
   }
 
-  // Different lines — find interchange
+  // Different lines — check if source or dest exist on the other line (Shared Track logic)
+  const sourceOnDestLine = stations.find(s => s.name === source.name && s.line === dest.line);
+  const destOnSourceLine = stations.find(s => s.name === dest.name && s.line === source.line);
+
+  if (sourceOnDestLine) {
+    return findRoute(sourceOnDestLine.id, destId);
+  }
+  if (destOnSourceLine) {
+    return findRoute(sourceId, destOnSourceLine.id);
+  }
+
+  // Still different lines — find interchange
   const interchangeMap = {
     'western-central': { station: 'Dadar', sourceId: 'dp', destId: 'ddr', name: 'Dadar' },
     'central-western': { station: 'Dadar', sourceId: 'ddr', destId: 'dp', name: 'Dadar' },
