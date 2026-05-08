@@ -126,7 +126,7 @@ function AppContent() {
 
           {/* Bottom Tagline */}
           <div className="home-footer">
-            <p className="footer-text">Powered by <span className="text-gradient">LocalPulse AI</span></p>
+            <p className="footer-text">Powered by <span className="text-gradient">Manish</span></p>
             <p className="footer-subtext">Mumbai • Navi Mumbai • Thane</p>
           </div>
         </main>
