@@ -125,6 +125,7 @@
 /* Autocomplete Dropdown */
 .autocomplete-dropdown {
   position: absolute;
+  top: calc(100% + 5px);
   left: 44px;
   right: 0;
   background: var(--bg-secondary);
@@ -135,15 +136,6 @@
   max-height: 240px;
   overflow-y: auto;
   animation: slide-down 0.2s ease;
-}
-
-.source-dropdown {
-  top: 70px;
-}
-
-.dest-dropdown {
-  bottom: auto;
-  top: 170px;
 }
 
 .dropdown-label {

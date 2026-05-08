@@ -160,6 +160,26 @@ export default function StationSearch({ onSearch }) {
                 ✕
               </button>
             )}
+
+            {/* Source Autocomplete Dropdown */}
+            {activeField === 'source' && sourceResults.length > 0 && (
+              <div className="autocomplete-dropdown source-dropdown">
+                {sourceQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
+                {sourceResults.map(station => (
+                  <button
+                    key={station.id}
+                    className="autocomplete-item"
+                    onMouseDown={() => selectStation(station, 'source')}
+                  >
+                    <div className="station-line-dot" style={{ background: getLineColor(station.line) }}></div>
+                    <div className="station-info">
+                      <span className="station-name">{station.name}</span>
+                      <span className="station-meta">{station.code} • {getLineLabel(station.line)}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Connector Line + Swap Button */}
@@ -197,46 +217,27 @@ export default function StationSearch({ onSearch }) {
                 ✕
               </button>
             )}
+
+            {/* Destination Autocomplete Dropdown */}
+            {activeField === 'dest' && destResults.length > 0 && (
+              <div className="autocomplete-dropdown dest-dropdown">
+                {destQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
+                {destResults.map(station => (
+                  <button
+                    key={station.id}
+                    className="autocomplete-item"
+                    onMouseDown={() => selectStation(station, 'dest')}
+                  >
+                    <div className="station-line-dot" style={{ background: getLineColor(station.line) }}></div>
+                    <div className="station-info">
+                      <span className="station-name">{station.name}</span>
+                      <span className="station-meta">{station.code} • {getLineLabel(station.line)}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-
-          {/* Autocomplete Dropdowns */}
-          {activeField === 'source' && sourceResults.length > 0 && (
-            <div className="autocomplete-dropdown source-dropdown">
-              {sourceQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
-              {sourceResults.map(station => (
-                <button
-                  key={station.id}
-                  className="autocomplete-item"
-                  onMouseDown={() => selectStation(station, 'source')}
-                >
-                  <div className="station-line-dot" style={{ background: getLineColor(station.line) }}></div>
-                  <div className="station-info">
-                    <span className="station-name">{station.name}</span>
-                    <span className="station-meta">{station.code} • {getLineLabel(station.line)}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
-
-          {activeField === 'dest' && destResults.length > 0 && (
-            <div className="autocomplete-dropdown dest-dropdown">
-              {destQuery.length === 0 && <div className="dropdown-label">Popular Stations</div>}
-              {destResults.map(station => (
-                <button
-                  key={station.id}
-                  className="autocomplete-item"
-                  onMouseDown={() => selectStation(station, 'dest')}
-                >
-                  <div className="station-line-dot" style={{ background: getLineColor(station.line) }}></div>
-                  <div className="station-info">
-                    <span className="station-name">{station.name}</span>
-                    <span className="station-meta">{station.code} • {getLineLabel(station.line)}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
         </div>
 
         {/* Action Buttons */}
