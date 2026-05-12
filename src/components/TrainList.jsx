@@ -1,6 +1,6 @@
 import './TrainList.css';
 
-export default function TrainList({ trains, badges }) {
+export default function TrainList({ trains, badges, onTrainSelect }) {
   if (!trains || trains.length === 0) return null;
 
   const crowdConfig = {
@@ -25,7 +25,8 @@ export default function TrainList({ trains, badges }) {
             <div
               key={train.id}
               className={`train-card ${train.isFast ? 'train-fast' : 'train-slow'}`}
-              style={{ animationDelay: `${index * 0.06}s` }}
+              style={{ animationDelay: `${index * 0.06}s`, cursor: 'pointer' }}
+              onClick={() => onTrainSelect?.(train)}
             >
               {/* Left color strip */}
               <div className={`train-strip ${train.isFast ? 'strip-fast' : 'strip-slow'}`}></div>

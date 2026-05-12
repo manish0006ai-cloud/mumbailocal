@@ -25,6 +25,7 @@ function AppContent() {
   const [insights, setInsights] = useState([]);
   const [badges, setBadges] = useState({});
   const [alerts, setAlerts] = useState([]);
+  const [selectedTrainId, setSelectedTrainId] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -41,6 +42,7 @@ function AppContent() {
       
       const generatedBadges = getTrainBadges(generatedTrains);
       setBadges(generatedBadges);
+      setSelectedTrainId(generatedTrains[0]?.id || null);
       
       const generatedAlerts = generateAlerts();
       setAlerts(generatedAlerts);
@@ -84,8 +86,8 @@ function AppContent() {
     }
   };
 
-  const heroTrain = trains[0];
-  const remainingTrains = trains.slice(1);
+  const heroTrain = trains.find(t => t.id === selectedTrainId) || trains[0];
+  const remainingTrains = trains.filter(t => t.id !== heroTrain?.id);
 
   return (
     <div className="app-container">
@@ -183,6 +185,7 @@ function AppContent() {
               source={state.source?.name} 
               destination={state.destination?.name} 
               isFast={heroTrain.isFast}
+              train={heroTrain}
             />
           )}
 
@@ -193,7 +196,14 @@ function AppContent() {
           <LiveAlerts alerts={alerts} />
 
           {/* Upcoming Trains */}
-          <TrainList trains={remainingTrains} badges={badges} />
+          <TrainList 
+            trains={remainingTrains} 
+            badges={badges} 
+            onTrainSelect={(t) => {
+              setSelectedTrainId(t.id);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} 
+          />
 
           {/* Crowd Prediction */}
           {heroTrain && <CrowdPrediction train={heroTrain} />}

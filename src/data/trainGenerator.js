@@ -115,6 +115,19 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
       isFast = false;
     }
 
+    // Determine the immediate destination for this segment to check skip lists
+    let displayDest = dest;
+    if (!skipInterchange && route.type === 'interchange' && route.interchange && route.interchange.id) {
+      const interchangeStation = getStation(route.interchange.id);
+      if (interchangeStation) displayDest = interchangeStation;
+    }
+
+    // If source or immediate destination is a skipped station for Fast trains, force Slow
+    const skipList = source.line === 'western' ? FAST_SKIP_WESTERN : source.line === 'central' ? FAST_SKIP_CENTRAL : [];
+    if (skipList.includes(sourceId) || skipList.includes(displayDest.id)) {
+      isFast = false;
+    }
+
     const stops = route.stops || 10;
     const travelTime = Math.round(estimateTravelTime(stops, isFast));
     const delay = generateDelay(isFast, baseHour);
@@ -132,12 +145,7 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     const depTime = `${String(baseHour).padStart(2, '0')}:${String(baseMinute).padStart(2, '0')}`;
     const arrTime = `${String(arrHour).padStart(2, '0')}:${String(arrMin).padStart(2, '0')}`;
 
-    // Determine the immediate destination for this segment
-    let displayDest = dest;
-    if (!skipInterchange && i === 0 && route.type === 'interchange' && route.interchange && route.interchange.id) {
-      const interchangeStation = getStation(route.interchange.id);
-      if (interchangeStation) displayDest = interchangeStation;
-    }
+
 
     // Direction for platform assignment
     const lineStations = getStationsOnLine(source.line);
@@ -150,9 +158,9 @@ export async function generateTrains(sourceId, destId, count = 12, baseTime = nu
     // Determine fast stops count
     const fastStops = isFast ? Math.ceil(stops * 0.6) : stops;
 
-    // Calculate minutes from now
+    // Calculate minutes from now, accounting for delay
     const depDate = new Date();
-    depDate.setHours(baseHour, baseMinute, 0, 0);
+    depDate.setHours(baseHour, baseMinute + delay, 0, 0);
     const minsFromNow = Math.max(0, Math.round((depDate - now) / 60000));
 
     const sources = ['NTES (Official)', 'mIndicator (Community)', 'Yatri (Live)', 'IRCTC Feed'];
@@ -208,7 +216,7 @@ export function refreshTrainTimes(trains) {
   return trains.map(train => {
     const [h, m] = train.departureTime.split(':').map(Number);
     const depDate = new Date();
-    depDate.setHours(h, m, 0, 0);
+    depDate.setHours(h, m + (train.delay || 0), 0, 0);
     const minsFromNow = Math.max(0, Math.round((depDate - now) / 60000));
     return { ...train, minsFromNow };
   }).filter(t => t.minsFromNow >= 0);

@@ -137,6 +137,15 @@ export const stations = [
   S('h_khdr','Khandeshwar','KHDR','harbour',2,[],250,400),
   S('h_pnl','Panvel','PNVL','harbour',6,[],250,380),
 
+  // ===== HARBOUR LINE — Roha Extension (Panvel → Roha) =====
+  S('h_rsyi','Rasayani','RSYI','harbour',2,[],250,360),
+  S('h_apta','Apta','APTA','harbour',2,[],250,340),
+  S('h_hmpr','Hamrapur','HMPR','harbour',2,[],250,320),
+  S('h_pen','Pen','PEN','harbour',2,[],250,300),
+  S('h_kasu','Kasu','KASU','harbour',2,[],250,280),
+  S('h_ngtn','Nagothane','NGTN','harbour',2,[],250,260),
+  S('h_roha','Roha','ROHA','harbour',3,[],250,240),
+
   // ===== HARBOUR LINE — Goregaon Branch (Wadala Road → Goregaon via Bandra) =====
   S('hg_kce','Kings Circle','KCE','harbour',2,[],280,785),
   S('hg_mm','Mahim Junction','MM','harbour',2,['western'],280,760),
@@ -250,8 +259,8 @@ export function findRoute(sourceId, destId) {
   const interchangeMap = {
     'western-central': { station: 'Dadar', sourceId: 'dp', destId: 'ddr', name: 'Dadar' },
     'central-western': { station: 'Dadar', sourceId: 'ddr', destId: 'dp', name: 'Dadar' },
-    'western-harbour': { station: 'Bandra', sourceId: 'ba', destId: 'h_kla', name: 'Bandra/Kurla' },
-    'harbour-western': { station: 'Kurla', sourceId: 'h_kla', destId: 'ba', name: 'Kurla/Bandra' },
+    'western-harbour': { station: 'Dadar+Kurla', sourceId: 'dp', destId: 'h_kla', via: 'central', name: 'Dadar & Kurla' },
+    'harbour-western': { station: 'Kurla+Dadar', sourceId: 'h_kla', destId: 'dp', via: 'central', name: 'Kurla & Dadar' },
     'central-harbour': { station: 'Kurla', sourceId: 'kla', destId: 'h_kla', name: 'Kurla' },
     'harbour-central': { station: 'Kurla', sourceId: 'h_kla', destId: 'kla', name: 'Kurla' },
     'central-trans-harbour': { station: 'Thane', sourceId: 'tna', destId: 'th_tna', name: 'Thane' },
@@ -286,8 +295,13 @@ export function findRoute(sourceId, destId) {
     // We need to find the correct IDs for the middle line
     let midSrcId, midDestId;
     if (interchange.via === 'central') {
-      midSrcId = 'ddr'; 
-      midDestId = 'tna';
+      if (source.line === 'western') {
+        midSrcId = 'ddr'; 
+        midDestId = 'tna';
+      } else {
+        midSrcId = 'tna'; 
+        midDestId = 'ddr';
+      }
     } else {
       midSrcId = interchange.sourceId;
       midDestId = interchange.destId;
@@ -312,7 +326,7 @@ export function findRoute(sourceId, destId) {
       stops: totalStops,
       interchange: {
         station: interchange.name,
-        id: interchange.sourceId,
+        id: midSrcId,
         id2: interchange.destId,
         name: interchange.name,
         isMulti: true,
