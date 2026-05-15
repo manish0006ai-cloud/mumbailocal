@@ -193,14 +193,8 @@ export async function generateTrains(sourceId, destId, count = 25, baseTime = nu
     }
   }
 
-  // Sort by time
-  results.sort((a, b) => a.trainTotalMins - b.trainTotalMins);
-
-  // Take requested count (default 25 to show more of the day)
-  const sliced = results.slice(0, count);
-
   // 2. Map to UI Model
-  return sliced.map(rt => {
+  let mapped = results.map(rt => {
     const [arrH, arrM] = rt.arrivalTime.split(':').map(Number);
     let duration = (arrH * 60 + arrM) - (rt.h * 60 + rt.m);
     if (duration < 0) duration += 1440;
@@ -210,11 +204,13 @@ export async function generateTrains(sourceId, destId, count = 25, baseTime = nu
     
     const depDate = new Date(now.getTime());
     depDate.setHours(rt.h, rt.m + delay, 0, 0);
-    if (depDate.getTime() < now.getTime() - 30 * 60 * 1000) {
+    
+    // Cross midnight correctly
+    if (depDate.getTime() < now.getTime() - 12 * 60 * 60 * 1000) {
       depDate.setDate(depDate.getDate() + 1);
     }
     
-    const minsFromNow = Math.max(0, Math.round((depDate.getTime() - now.getTime()) / 60000));
+    const minsFromNow = Math.round((depDate.getTime() - now.getTime()) / 60000);
 
     return {
       ...rt,
@@ -231,6 +227,16 @@ export async function generateTrains(sourceId, destId, count = 25, baseTime = nu
       dataSource: 'Official Timetable'
     };
   });
+
+  if (!allDay) {
+    mapped = mapped.filter(t => t.minsFromNow >= -5);
+  }
+
+  // Sort by actual time from now
+  mapped.sort((a, b) => a.minsFromNow - b.minsFromNow);
+
+  // Take requested count
+  return mapped.slice(0, count);
 }
 
 // Get countdown text
@@ -249,7 +255,7 @@ export function refreshTrainTimes(trains) {
     const [h, m] = train.departureTime.split(':').map(Number);
     const depDate = new Date();
     depDate.setHours(h, m + (train.delay || 0), 0, 0);
-    const minsFromNow = Math.max(0, Math.round((depDate - now) / 60000));
+    const minsFromNow = Math.round((depDate - now) / 60000);
     return { ...train, minsFromNow };
   }).filter(t => t.minsFromNow >= -5); // Keep trains for 5 mins after departure
 }
