@@ -19,10 +19,10 @@ const CROWD_LABELS = { low: 'Low', medium: 'Medium', heavy: 'Heavy', extreme: 'E
 function createTrainIcon(color, crowdLevel, isTracked = false) {
   const size = crowdLevel === 'extreme' ? 18 : crowdLevel === 'heavy' ? 15 : 12;
   const extraClass = crowdLevel === 'extreme' ? ' extreme' : '';
-  const trackerGlow = isTracked ? 'box-shadow: 0 0 0 6px rgba(255,255,255,0.4); border: 2px solid white;' : '';
+  const trackedClass = isTracked ? ' tracked-train' : '';
   return L.divIcon({
     className: '',
-    html: `<div class="train-marker${extraClass}" style="width:${size}px;height:${size}px;background:${color};${trackerGlow}"></div>`,
+    html: `<div class="train-marker${extraClass}${trackedClass}" style="width:${size}px;height:${size}px;background:${color};"></div>`,
     iconSize: [size, size],
     iconAnchor: [size / 2, size / 2],
   });
