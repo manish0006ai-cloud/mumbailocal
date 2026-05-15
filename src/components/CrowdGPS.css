@@ -1,0 +1,489 @@
+/* ====== Crowd GPS Live Dashboard ====== */
+
+.crowd-gps-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0a0e1a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.crowd-gps-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(15, 20, 40, 0.95), rgba(10, 14, 26, 0.98));
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  z-index: 10;
+  min-height: 52px;
+}
+
+.crowd-gps-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crowd-gps-back-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  color: #94a3b8;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.crowd-gps-back-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.crowd-gps-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.crowd-gps-title span {
+  background: linear-gradient(135deg, #22d3ee, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.crowd-gps-subtitle {
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.crowd-gps-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Live Pulse */
+.live-pulse {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #22d3ee;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(34,197,94,0); }
+}
+
+/* GPS Toggle */
+.gps-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gps-toggle-label {
+  font-size: 9px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.gps-toggle {
+  width: 40px;
+  height: 22px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.gps-toggle.active {
+  background: linear-gradient(135deg, #059669, #22c55e);
+  border-color: #22c55e;
+}
+
+.gps-toggle-knob {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.gps-toggle.active .gps-toggle-knob {
+  transform: translateX(18px);
+}
+
+/* Map Container */
+.crowd-map-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.crowd-map-container .leaflet-container {
+  width: 100%;
+  height: 100%;
+  background: #0a0e1a;
+}
+
+/* Bottom Stats Panel */
+.crowd-stats-panel {
+  background: linear-gradient(180deg, rgba(15,20,40,0.96), rgba(10,14,26,0.99));
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 12px 14px;
+  max-height: 40vh;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.crowd-stats-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.crowd-stats-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.2px;
+}
+
+.crowd-stats-count {
+  font-size: 10px;
+  color: #64748b;
+  background: rgba(255,255,255,0.04);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* Line Cards */
+.crowd-line-cards {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.crowd-line-cards::-webkit-scrollbar { display: none; }
+
+.crowd-line-card {
+  min-width: 140px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 10px 12px;
+  flex-shrink: 0;
+}
+
+.crowd-line-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.crowd-line-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.crowd-line-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+}
+
+.crowd-line-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.crowd-line-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.crowd-line-stat-label {
+  font-size: 8px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.crowd-line-stat-value {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Crowd level badges */
+.crowd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.crowd-badge.low {
+  background: rgba(34,197,94,0.15);
+  color: #22c55e;
+}
+
+.crowd-badge.medium {
+  background: rgba(250,204,21,0.15);
+  color: #facc15;
+}
+
+.crowd-badge.heavy {
+  background: rgba(249,115,22,0.15);
+  color: #f97316;
+}
+
+.crowd-badge.extreme {
+  background: rgba(239,68,68,0.15);
+  color: #ef4444;
+}
+
+/* Station Alerts */
+.crowd-station-alerts {
+  margin-top: 10px;
+}
+
+.crowd-station-alert-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.crowd-station-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.crowd-station-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.crowd-station-name {
+  font-size: 11px;
+  color: white;
+  font-weight: 500;
+}
+
+.crowd-station-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crowd-station-trains {
+  font-size: 9px;
+  color: #64748b;
+}
+
+/* Train Popup on map */
+.train-popup {
+  font-family: 'Inter', sans-serif;
+}
+
+.train-popup-header {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.train-popup-line {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 5px;
+  border-radius: 4px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.train-popup-detail {
+  font-size: 10px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.train-popup-detail b {
+  color: #334155;
+}
+
+/* Map Overlays for custom markers */
+.train-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.train-marker::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.train-marker.extreme {
+  animation: marker-alert 1.5s infinite;
+}
+
+@keyframes marker-alert {
+  0%, 100% { box-shadow: 0 2px 8px rgba(239,68,68,0.4); }
+  50% { box-shadow: 0 2px 16px rgba(239,68,68,0.8); }
+}
+
+.station-marker-dot {
+  width: 8px;
+  height: 8px;
+  background: rgba(255,255,255,0.7);
+  border: 1.5px solid rgba(255,255,255,0.9);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+/* Expand/collapse handle */
+.crowd-panel-handle {
+  width: 36px;
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 2px;
+  margin: 0 auto 8px;
+  cursor: pointer;
+}
+
+/* Dark map tiles override */
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(200deg) saturate(0.4) brightness(0.9) contrast(1.1);
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4) !important;
+}
+
+.leaflet-control-zoom a {
+  background: rgba(15,20,40,0.9) !important;
+  color: #94a3b8 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  font-size: 16px !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: rgba(30,40,60,0.95) !important;
+  color: white !important;
+}
+
+/* Floating info badge */
+.crowd-gps-float-badge {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(15,20,40,0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(12px);
+}
+
+.crowd-gps-float-badge span {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.crowd-gps-float-badge strong {
+  color: white;
+  font-size: 12px;
+}
+
+/* Home button */
+.crowd-gps-home-btn {
+  background: linear-gradient(135deg, rgba(34,211,238,0.12), rgba(52,211,153,0.12));
+  border: 1px solid rgba(34,211,238,0.2);
+  border-radius: 12px;
+  color: #22d3ee;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.crowd-gps-home-btn:hover {
+  background: linear-gradient(135deg, rgba(34,211,238,0.2), rgba(52,211,153,0.2));
+  transform: translateY(-1px);
+}

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { getCountdownText } from '../data/trainGenerator';
 import './HeroTrainCard.css';
 
-export default function HeroTrainCard({ train, badge, insights = [] }) {
+export default function HeroTrainCard({ train, badge, insights = [], onViewSchedule, onTrackLive }) {
   const [now, setNow] = useState(Date.now());
   const [departed, setDeparted] = useState(false);
   
@@ -178,6 +178,14 @@ export default function HeroTrainCard({ train, badge, insights = [] }) {
           </div>
         </div>
         <div className="hero-badges">
+          {onTrackLive && !departed && (
+            <button className="badge-track-btn" onClick={() => onTrackLive(train.number)} title="Track this train live on map">
+              📍 Track Live
+            </button>
+          )}
+          <button className="badge-schedule-btn" onClick={onViewSchedule} title="View full train timetable">
+            📅 View Schedule
+          </button>
           <span className={`badge ${train.isFast ? 'badge-fast' : 'badge-slow'}`}>
             {train.isFast ? '⚡ FAST' : '🔵 SLOW'}
           </span>

@@ -1,0 +1,5868 @@
+{
+  "99001": [
+    {
+      "station": "Thane",
+      "time": "00:05"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "00:10"
+    },
+    {
+      "station": "Airoli",
+      "time": "00:13"
+    },
+    {
+      "station": "Rabale",
+      "time": "00:16"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "00:19"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "00:22"
+    },
+    {
+      "station": "Turbhe",
+      "time": "00:26"
+    },
+    {
+      "station": "Juinagar",
+      "time": "00:30"
+    },
+    {
+      "station": "Nerul",
+      "time": "00:34"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "00:38"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "00:42"
+    },
+    {
+      "station": "Kharghar",
+      "time": "00:46"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "00:49"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "00:52"
+    },
+    {
+      "station": "Panvel",
+      "time": "00:57"
+    }
+  ],
+  "99003": [
+    {
+      "station": "Thane",
+      "time": "05:12"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "05:17"
+    },
+    {
+      "station": "Airoli",
+      "time": "05:20"
+    },
+    {
+      "station": "Rabale",
+      "time": "05:23"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "05:26"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "05:29"
+    },
+    {
+      "station": "Turbhe",
+      "time": "05:33"
+    },
+    {
+      "station": "Juinagar",
+      "time": "05:37"
+    },
+    {
+      "station": "Nerul",
+      "time": "05:41"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "05:45"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "05:49"
+    },
+    {
+      "station": "Kharghar",
+      "time": "05:53"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "05:56"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "05:59"
+    },
+    {
+      "station": "Panvel",
+      "time": "06:04"
+    }
+  ],
+  "99401": [
+    {
+      "station": "Thane",
+      "time": "05:25"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "05:30"
+    },
+    {
+      "station": "Airoli",
+      "time": "05:33"
+    },
+    {
+      "station": "Rabale",
+      "time": "05:36"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "05:39"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "05:42"
+    },
+    {
+      "station": "Turbhe",
+      "time": "05:46"
+    },
+    {
+      "station": "Sanpada",
+      "time": "05:50"
+    },
+    {
+      "station": "Vashi",
+      "time": "05:54"
+    }
+  ],
+  "99201": [
+    {
+      "station": "Thane",
+      "time": "05:40"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "05:45"
+    },
+    {
+      "station": "Airoli",
+      "time": "05:48"
+    },
+    {
+      "station": "Rabale",
+      "time": "05:51"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "05:54"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "05:57"
+    },
+    {
+      "station": "Turbhe",
+      "time": "06:01"
+    },
+    {
+      "station": "Juinagar",
+      "time": "06:05"
+    },
+    {
+      "station": "Nerul",
+      "time": "06:10"
+    }
+  ],
+  "99403": [
+    {
+      "station": "Thane",
+      "time": "05:53"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "05:58"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:01"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:04"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "06:07"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "06:10"
+    },
+    {
+      "station": "Turbhe",
+      "time": "06:14"
+    },
+    {
+      "station": "Sanpada",
+      "time": "06:18"
+    },
+    {
+      "station": "Vashi",
+      "time": "06:22"
+    }
+  ],
+  "99405": [
+    {
+      "station": "Thane",
+      "time": "06:09"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "06:14"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:17"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:20"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "06:23"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "06:26"
+    },
+    {
+      "station": "Turbhe",
+      "time": "06:30"
+    },
+    {
+      "station": "Sanpada",
+      "time": "06:34"
+    },
+    {
+      "station": "Vashi",
+      "time": "06:38"
+    }
+  ],
+  "99005": [
+    {
+      "station": "Thane",
+      "time": "06:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "06:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "06:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "06:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "06:41"
+    },
+    {
+      "station": "Juinagar",
+      "time": "06:45"
+    },
+    {
+      "station": "Nerul",
+      "time": "06:49"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "06:53"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "06:57"
+    },
+    {
+      "station": "Kharghar",
+      "time": "07:01"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "07:04"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "07:07"
+    },
+    {
+      "station": "Panvel",
+      "time": "07:12"
+    }
+  ],
+  "99203": [
+    {
+      "station": "Thane",
+      "time": "06:27"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "06:32"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:35"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:38"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "06:41"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "06:44"
+    },
+    {
+      "station": "Turbhe",
+      "time": "06:48"
+    },
+    {
+      "station": "Juinagar",
+      "time": "06:52"
+    },
+    {
+      "station": "Nerul",
+      "time": "06:57"
+    }
+  ],
+  "99407": [
+    {
+      "station": "Thane",
+      "time": "06:39"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "06:44"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:47"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:50"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "06:53"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "06:56"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:00"
+    },
+    {
+      "station": "Sanpada",
+      "time": "07:04"
+    },
+    {
+      "station": "Vashi",
+      "time": "07:08"
+    }
+  ],
+  "99205": [
+    {
+      "station": "Thane",
+      "time": "06:46"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "06:51"
+    },
+    {
+      "station": "Airoli",
+      "time": "06:54"
+    },
+    {
+      "station": "Rabale",
+      "time": "06:57"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:00"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:03"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:07"
+    },
+    {
+      "station": "Juinagar",
+      "time": "07:11"
+    },
+    {
+      "station": "Nerul",
+      "time": "07:18"
+    }
+  ],
+  "99409": [
+    {
+      "station": "Thane",
+      "time": "06:59"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:04"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:07"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:10"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:13"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:16"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:20"
+    },
+    {
+      "station": "Sanpada",
+      "time": "07:24"
+    },
+    {
+      "station": "Vashi",
+      "time": "07:28"
+    }
+  ],
+  "99007": [
+    {
+      "station": "Thane",
+      "time": "07:04"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:09"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:12"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:15"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:18"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:21"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:25"
+    },
+    {
+      "station": "Juinagar",
+      "time": "07:29"
+    },
+    {
+      "station": "Nerul",
+      "time": "07:34"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "07:38"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "07:42"
+    },
+    {
+      "station": "Kharghar",
+      "time": "07:46"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "07:49"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "07:52"
+    },
+    {
+      "station": "Panvel",
+      "time": "07:57"
+    }
+  ],
+  "99411": [
+    {
+      "station": "Thane",
+      "time": "07:17"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:22"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:25"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:28"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:31"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:34"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:38"
+    },
+    {
+      "station": "Sanpada",
+      "time": "07:42"
+    },
+    {
+      "station": "Vashi",
+      "time": "07:46"
+    }
+  ],
+  "99207": [
+    {
+      "station": "Thane",
+      "time": "07:23"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:28"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:31"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:34"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:37"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:40"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:44"
+    },
+    {
+      "station": "Juinagar",
+      "time": "07:48"
+    },
+    {
+      "station": "Nerul",
+      "time": "07:53"
+    }
+  ],
+  "99413": [
+    {
+      "station": "Thane",
+      "time": "07:35"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:40"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:43"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:46"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:49"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "07:52"
+    },
+    {
+      "station": "Turbhe",
+      "time": "07:56"
+    },
+    {
+      "station": "Sanpada",
+      "time": "08:00"
+    },
+    {
+      "station": "Vashi",
+      "time": "08:04"
+    }
+  ],
+  "99209": [
+    {
+      "station": "Thane",
+      "time": "07:43"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:48"
+    },
+    {
+      "station": "Airoli",
+      "time": "07:51"
+    },
+    {
+      "station": "Rabale",
+      "time": "07:54"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "07:57"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:00"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:04"
+    },
+    {
+      "station": "Juinagar",
+      "time": "08:08"
+    },
+    {
+      "station": "Nerul",
+      "time": "08:13"
+    }
+  ],
+  "99415": [
+    {
+      "station": "Thane",
+      "time": "07:53"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "07:58"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:01"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:04"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:07"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:10"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:14"
+    },
+    {
+      "station": "Sanpada",
+      "time": "08:18"
+    },
+    {
+      "station": "Vashi",
+      "time": "08:22"
+    }
+  ],
+  "99009": [
+    {
+      "station": "Thane",
+      "time": "08:03"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:08"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:11"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:14"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:17"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:20"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:24"
+    },
+    {
+      "station": "Juinagar",
+      "time": "08:28"
+    },
+    {
+      "station": "Nerul",
+      "time": "08:33"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "08:37"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "08:41"
+    },
+    {
+      "station": "Kharghar",
+      "time": "08:45"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "08:48"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "08:51"
+    },
+    {
+      "station": "Panvel",
+      "time": "08:56"
+    }
+  ],
+  "99417": [
+    {
+      "station": "Thane",
+      "time": "08:07"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:12"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:15"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:18"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:21"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:24"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:28"
+    },
+    {
+      "station": "Sanpada",
+      "time": "08:32"
+    },
+    {
+      "station": "Vashi",
+      "time": "08:37"
+    }
+  ],
+  "99211": [
+    {
+      "station": "Thane",
+      "time": "08:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "08:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "08:44"
+    }
+  ],
+  "99419": [
+    {
+      "station": "Thane",
+      "time": "08:23"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:28"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:31"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:34"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:37"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:40"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:44"
+    },
+    {
+      "station": "Sanpada",
+      "time": "08:48"
+    },
+    {
+      "station": "Vashi",
+      "time": "08:52"
+    }
+  ],
+  "99213": [
+    {
+      "station": "Thane",
+      "time": "08:31"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:36"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:39"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:42"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:45"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:48"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:52"
+    },
+    {
+      "station": "Juinagar",
+      "time": "08:56"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:01"
+    }
+  ],
+  "99421": [
+    {
+      "station": "Thane",
+      "time": "08:36"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:41"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:44"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:47"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:50"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:53"
+    },
+    {
+      "station": "Turbhe",
+      "time": "08:57"
+    },
+    {
+      "station": "Sanpada",
+      "time": "09:01"
+    },
+    {
+      "station": "Vashi",
+      "time": "09:05"
+    }
+  ],
+  "99011": [
+    {
+      "station": "Thane",
+      "time": "08:41"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:46"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:49"
+    },
+    {
+      "station": "Rabale",
+      "time": "08:52"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "08:55"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "08:58"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:02"
+    },
+    {
+      "station": "Juinagar",
+      "time": "09:06"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:10"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "09:14"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "09:18"
+    },
+    {
+      "station": "Kharghar",
+      "time": "09:22"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "09:25"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "09:28"
+    },
+    {
+      "station": "Panvel",
+      "time": "09:33"
+    }
+  ],
+  "99215": [
+    {
+      "station": "Thane",
+      "time": "08:51"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "08:56"
+    },
+    {
+      "station": "Airoli",
+      "time": "08:59"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:02"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:05"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:08"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:12"
+    },
+    {
+      "station": "Juinagar",
+      "time": "09:16"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:21"
+    }
+  ],
+  "99423": [
+    {
+      "station": "Thane",
+      "time": "08:56"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:01"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:04"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:07"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:10"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:13"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:17"
+    },
+    {
+      "station": "Sanpada",
+      "time": "09:21"
+    },
+    {
+      "station": "Vashi",
+      "time": "09:25"
+    }
+  ],
+  "99217": [
+    {
+      "station": "Thane",
+      "time": "09:04"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:09"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:12"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:15"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:18"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:21"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:25"
+    },
+    {
+      "station": "Juinagar",
+      "time": "09:29"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:34"
+    }
+  ],
+  "99425": [
+    {
+      "station": "Thane",
+      "time": "09:09"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:14"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:17"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:20"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:23"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:26"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:30"
+    },
+    {
+      "station": "Sanpada",
+      "time": "09:34"
+    },
+    {
+      "station": "Vashi",
+      "time": "09:39"
+    }
+  ],
+  "99013": [
+    {
+      "station": "Thane",
+      "time": "09:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "09:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:43"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "09:47"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "09:51"
+    },
+    {
+      "station": "Kharghar",
+      "time": "09:55"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "09:58"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "10:01"
+    },
+    {
+      "station": "Panvel",
+      "time": "10:06"
+    }
+  ],
+  "99219": [
+    {
+      "station": "Thane",
+      "time": "09:19"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:24"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:27"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:30"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:33"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:36"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:40"
+    },
+    {
+      "station": "Juinagar",
+      "time": "09:44"
+    },
+    {
+      "station": "Nerul",
+      "time": "09:51"
+    }
+  ],
+  "99427": [
+    {
+      "station": "Thane",
+      "time": "09:30"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:35"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:38"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:41"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:44"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:47"
+    },
+    {
+      "station": "Turbhe",
+      "time": "09:51"
+    },
+    {
+      "station": "Sanpada",
+      "time": "09:55"
+    },
+    {
+      "station": "Vashi",
+      "time": "09:59"
+    }
+  ],
+  "99015": [
+    {
+      "station": "Thane",
+      "time": "09:39"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:44"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:47"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:50"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "09:53"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "09:56"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:00"
+    },
+    {
+      "station": "Juinagar",
+      "time": "10:04"
+    },
+    {
+      "station": "Nerul",
+      "time": "10:08"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "10:12"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "10:16"
+    },
+    {
+      "station": "Kharghar",
+      "time": "10:20"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "10:23"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "10:26"
+    },
+    {
+      "station": "Panvel",
+      "time": "10:31"
+    }
+  ],
+  "99221": [
+    {
+      "station": "Thane",
+      "time": "09:47"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:52"
+    },
+    {
+      "station": "Airoli",
+      "time": "09:55"
+    },
+    {
+      "station": "Rabale",
+      "time": "09:58"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:01"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:04"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:08"
+    },
+    {
+      "station": "Juinagar",
+      "time": "10:12"
+    },
+    {
+      "station": "Nerul",
+      "time": "10:17"
+    }
+  ],
+  "99429": [
+    {
+      "station": "Thane",
+      "time": "09:53"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "09:58"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:01"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:04"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:07"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:10"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:14"
+    },
+    {
+      "station": "Sanpada",
+      "time": "10:18"
+    },
+    {
+      "station": "Vashi",
+      "time": "10:22"
+    }
+  ],
+  "99017": [
+    {
+      "station": "Thane",
+      "time": "10:01"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:06"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:09"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:12"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:15"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:18"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:22"
+    },
+    {
+      "station": "Juinagar",
+      "time": "10:26"
+    },
+    {
+      "station": "Nerul",
+      "time": "10:31"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "10:35"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "10:39"
+    },
+    {
+      "station": "Kharghar",
+      "time": "10:43"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "10:46"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "10:49"
+    },
+    {
+      "station": "Panvel",
+      "time": "10:54"
+    }
+  ],
+  "99431": [
+    {
+      "station": "Thane",
+      "time": "10:07"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:12"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:15"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:18"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:21"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:24"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:28"
+    },
+    {
+      "station": "Sanpada",
+      "time": "10:32"
+    },
+    {
+      "station": "Vashi",
+      "time": "10:36"
+    }
+  ],
+  "99223": [
+    {
+      "station": "Thane",
+      "time": "10:12"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:17"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:20"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:23"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:26"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:29"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:33"
+    },
+    {
+      "station": "Juinagar",
+      "time": "10:37"
+    },
+    {
+      "station": "Nerul",
+      "time": "10:42"
+    }
+  ],
+  "99433": [
+    {
+      "station": "Thane",
+      "time": "10:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:41"
+    },
+    {
+      "station": "Sanpada",
+      "time": "10:45"
+    },
+    {
+      "station": "Vashi",
+      "time": "10:50"
+    }
+  ],
+  "99435": [
+    {
+      "station": "Thane",
+      "time": "10:35"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:40"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:43"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:46"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:49"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:52"
+    },
+    {
+      "station": "Turbhe",
+      "time": "10:56"
+    },
+    {
+      "station": "Sanpada",
+      "time": "11:00"
+    },
+    {
+      "station": "Vashi",
+      "time": "11:05"
+    }
+  ],
+  "99019": [
+    {
+      "station": "Thane",
+      "time": "10:39"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:44"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:47"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:50"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "10:53"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "10:56"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:00"
+    },
+    {
+      "station": "Juinagar",
+      "time": "11:05"
+    },
+    {
+      "station": "Nerul",
+      "time": "11:11"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "11:15"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "11:19"
+    },
+    {
+      "station": "Kharghar",
+      "time": "11:23"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "11:26"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "11:29"
+    },
+    {
+      "station": "Panvel",
+      "time": "11:34"
+    }
+  ],
+  "99437": [
+    {
+      "station": "Thane",
+      "time": "10:48"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "10:53"
+    },
+    {
+      "station": "Airoli",
+      "time": "10:56"
+    },
+    {
+      "station": "Rabale",
+      "time": "10:59"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:02"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:05"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:09"
+    },
+    {
+      "station": "Sanpada",
+      "time": "11:13"
+    },
+    {
+      "station": "Vashi",
+      "time": "11:17"
+    }
+  ],
+  "99225": [
+    {
+      "station": "Thane",
+      "time": "10:55"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:00"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:03"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:06"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:09"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:12"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:16"
+    },
+    {
+      "station": "Juinagar",
+      "time": "11:20"
+    },
+    {
+      "station": "Nerul",
+      "time": "11:25"
+    }
+  ],
+  "99439": [
+    {
+      "station": "Thane",
+      "time": "11:06"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:11"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:14"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:17"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:20"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:23"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:27"
+    },
+    {
+      "station": "Sanpada",
+      "time": "11:31"
+    },
+    {
+      "station": "Vashi",
+      "time": "11:35"
+    }
+  ],
+  "99021": [
+    {
+      "station": "Thane",
+      "time": "11:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "11:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "11:44"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "11:48"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "11:52"
+    },
+    {
+      "station": "Kharghar",
+      "time": "11:56"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "11:59"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "12:02"
+    },
+    {
+      "station": "Panvel",
+      "time": "12:07"
+    }
+  ],
+  "99441": [
+    {
+      "station": "Thane",
+      "time": "11:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:41"
+    },
+    {
+      "station": "Sanpada",
+      "time": "11:45"
+    },
+    {
+      "station": "Vashi",
+      "time": "11:49"
+    }
+  ],
+  "99227": [
+    {
+      "station": "Thane",
+      "time": "11:27"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:32"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:35"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:38"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:41"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:44"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:48"
+    },
+    {
+      "station": "Juinagar",
+      "time": "11:52"
+    },
+    {
+      "station": "Nerul",
+      "time": "11:57"
+    }
+  ],
+  "99443": [
+    {
+      "station": "Thane",
+      "time": "11:35"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:40"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:43"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:46"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:49"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:52"
+    },
+    {
+      "station": "Turbhe",
+      "time": "11:56"
+    },
+    {
+      "station": "Sanpada",
+      "time": "12:00"
+    },
+    {
+      "station": "Vashi",
+      "time": "12:04"
+    }
+  ],
+  "99229": [
+    {
+      "station": "Thane",
+      "time": "11:42"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:47"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:50"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:53"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "11:56"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "11:59"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:03"
+    },
+    {
+      "station": "Juinagar",
+      "time": "12:07"
+    },
+    {
+      "station": "Nerul",
+      "time": "12:12"
+    }
+  ],
+  "99445": [
+    {
+      "station": "Thane",
+      "time": "11:48"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "11:53"
+    },
+    {
+      "station": "Airoli",
+      "time": "11:56"
+    },
+    {
+      "station": "Rabale",
+      "time": "11:59"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:02"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:05"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:09"
+    },
+    {
+      "station": "Sanpada",
+      "time": "12:13"
+    },
+    {
+      "station": "Vashi",
+      "time": "12:17"
+    }
+  ],
+  "99023": [
+    {
+      "station": "Thane",
+      "time": "12:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:09"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:13"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:16"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:19"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:23"
+    },
+    {
+      "station": "Juinagar",
+      "time": "12:28"
+    },
+    {
+      "station": "Nerul",
+      "time": "12:33"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "12:37"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "12:41"
+    },
+    {
+      "station": "Kharghar",
+      "time": "12:45"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "12:48"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "12:51"
+    },
+    {
+      "station": "Panvel",
+      "time": "12:56"
+    }
+  ],
+  "99447": [
+    {
+      "station": "Thane",
+      "time": "12:06"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:11"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:14"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:17"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:20"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:23"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:27"
+    },
+    {
+      "station": "Sanpada",
+      "time": "12:31"
+    },
+    {
+      "station": "Vashi",
+      "time": "12:35"
+    }
+  ],
+  "99231": [
+    {
+      "station": "Thane",
+      "time": "12:12"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:17"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:20"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:23"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:26"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:29"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:33"
+    },
+    {
+      "station": "Juinagar",
+      "time": "12:37"
+    },
+    {
+      "station": "Nerul",
+      "time": "12:42"
+    }
+  ],
+  "99449": [
+    {
+      "station": "Thane",
+      "time": "12:18"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:23"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:26"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:29"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:32"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:35"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:39"
+    },
+    {
+      "station": "Sanpada",
+      "time": "12:43"
+    },
+    {
+      "station": "Vashi",
+      "time": "12:47"
+    }
+  ],
+  "99233": [
+    {
+      "station": "Thane",
+      "time": "12:35"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:40"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:43"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:46"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:49"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:52"
+    },
+    {
+      "station": "Turbhe",
+      "time": "12:56"
+    },
+    {
+      "station": "Juinagar",
+      "time": "13:00"
+    },
+    {
+      "station": "Nerul",
+      "time": "13:05"
+    }
+  ],
+  "99451": [
+    {
+      "station": "Thane",
+      "time": "12:41"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:46"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:49"
+    },
+    {
+      "station": "Rabale",
+      "time": "12:52"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "12:55"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "12:58"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:02"
+    },
+    {
+      "station": "Sanpada",
+      "time": "13:06"
+    },
+    {
+      "station": "Vashi",
+      "time": "13:10"
+    }
+  ],
+  "99025": [
+    {
+      "station": "Thane",
+      "time": "12:49"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "12:54"
+    },
+    {
+      "station": "Airoli",
+      "time": "12:57"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:00"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:03"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:06"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:10"
+    },
+    {
+      "station": "Juinagar",
+      "time": "13:14"
+    },
+    {
+      "station": "Nerul",
+      "time": "13:19"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "13:23"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "13:27"
+    },
+    {
+      "station": "Kharghar",
+      "time": "13:31"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "13:34"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "13:37"
+    },
+    {
+      "station": "Panvel",
+      "time": "13:42"
+    }
+  ],
+  "99453": [
+    {
+      "station": "Thane",
+      "time": "13:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:08"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:11"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:14"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:17"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:21"
+    },
+    {
+      "station": "Sanpada",
+      "time": "13:25"
+    },
+    {
+      "station": "Vashi",
+      "time": "13:29"
+    }
+  ],
+  "99235": [
+    {
+      "station": "Thane",
+      "time": "13:10"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:15"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:18"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:21"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:24"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:27"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:31"
+    },
+    {
+      "station": "Juinagar",
+      "time": "13:35"
+    },
+    {
+      "station": "Nerul",
+      "time": "13:40"
+    }
+  ],
+  "99027": [
+    {
+      "station": "Thane",
+      "time": "13:24"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:29"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:32"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:35"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:38"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:41"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:45"
+    },
+    {
+      "station": "Juinagar",
+      "time": "13:49"
+    },
+    {
+      "station": "Nerul",
+      "time": "13:53"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "13:57"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "14:01"
+    },
+    {
+      "station": "Kharghar",
+      "time": "14:05"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "14:08"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "14:11"
+    },
+    {
+      "station": "Panvel",
+      "time": "14:16"
+    }
+  ],
+  "99455": [
+    {
+      "station": "Thane",
+      "time": "13:30"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:35"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:38"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:41"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:44"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:47"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:51"
+    },
+    {
+      "station": "Sanpada",
+      "time": "13:55"
+    },
+    {
+      "station": "Vashi",
+      "time": "13:59"
+    }
+  ],
+  "99237": [
+    {
+      "station": "Thane",
+      "time": "13:37"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:42"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:45"
+    },
+    {
+      "station": "Rabale",
+      "time": "13:48"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "13:51"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "13:54"
+    },
+    {
+      "station": "Turbhe",
+      "time": "13:58"
+    },
+    {
+      "station": "Juinagar",
+      "time": "14:02"
+    },
+    {
+      "station": "Nerul",
+      "time": "14:07"
+    }
+  ],
+  "99457": [
+    {
+      "station": "Thane",
+      "time": "13:50"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "13:55"
+    },
+    {
+      "station": "Airoli",
+      "time": "13:58"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:01"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "14:04"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "14:07"
+    },
+    {
+      "station": "Turbhe",
+      "time": "14:11"
+    },
+    {
+      "station": "Sanpada",
+      "time": "14:15"
+    },
+    {
+      "station": "Vashi",
+      "time": "14:19"
+    }
+  ],
+  "99029": [
+    {
+      "station": "Thane",
+      "time": "14:03"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:08"
+    },
+    {
+      "station": "Airoli",
+      "time": "14:11"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:14"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "14:17"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "14:20"
+    },
+    {
+      "station": "Turbhe",
+      "time": "14:24"
+    },
+    {
+      "station": "Juinagar",
+      "time": "14:28"
+    },
+    {
+      "station": "Nerul",
+      "time": "14:32"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "14:36"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "14:40"
+    },
+    {
+      "station": "Kharghar",
+      "time": "14:44"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "14:47"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "14:50"
+    },
+    {
+      "station": "Panvel",
+      "time": "14:55"
+    }
+  ],
+  "99239": [
+    {
+      "station": "Thane",
+      "time": "14:13"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:18"
+    },
+    {
+      "station": "Airoli",
+      "time": "14:21"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:24"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "14:27"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "14:30"
+    },
+    {
+      "station": "Turbhe",
+      "time": "14:34"
+    },
+    {
+      "station": "Juinagar",
+      "time": "14:38"
+    },
+    {
+      "station": "Nerul",
+      "time": "14:43"
+    }
+  ],
+  "99459": [
+    {
+      "station": "Thane",
+      "time": "14:19"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:24"
+    },
+    {
+      "station": "Airoli",
+      "time": "14:27"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:30"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "14:33"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "14:36"
+    },
+    {
+      "station": "Turbhe",
+      "time": "14:40"
+    },
+    {
+      "station": "Sanpada",
+      "time": "14:44"
+    },
+    {
+      "station": "Vashi",
+      "time": "14:48"
+    }
+  ],
+  "99031": [
+    {
+      "station": "Thane",
+      "time": "14:36"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:41"
+    },
+    {
+      "station": "Airoli",
+      "time": "14:44"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:47"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "14:50"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "14:53"
+    },
+    {
+      "station": "Turbhe",
+      "time": "14:57"
+    },
+    {
+      "station": "Juinagar",
+      "time": "15:01"
+    },
+    {
+      "station": "Nerul",
+      "time": "15:05"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "15:09"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "15:13"
+    },
+    {
+      "station": "Kharghar",
+      "time": "15:17"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "15:20"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "15:23"
+    },
+    {
+      "station": "Panvel",
+      "time": "15:28"
+    }
+  ],
+  "99461": [
+    {
+      "station": "Thane",
+      "time": "14:46"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:51"
+    },
+    {
+      "station": "Airoli",
+      "time": "14:54"
+    },
+    {
+      "station": "Rabale",
+      "time": "14:57"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:00"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:03"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:07"
+    },
+    {
+      "station": "Sanpada",
+      "time": "15:11"
+    },
+    {
+      "station": "Vashi",
+      "time": "15:15"
+    }
+  ],
+  "99033": [
+    {
+      "station": "Thane",
+      "time": "14:54"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "14:59"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:02"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:05"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:08"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:11"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:15"
+    },
+    {
+      "station": "Juinagar",
+      "time": "15:19"
+    },
+    {
+      "station": "Nerul",
+      "time": "15:23"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "15:27"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "15:31"
+    },
+    {
+      "station": "Kharghar",
+      "time": "15:35"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "15:38"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "15:41"
+    },
+    {
+      "station": "Panvel",
+      "time": "15:46"
+    }
+  ],
+  "99463": [
+    {
+      "station": "Thane",
+      "time": "15:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:08"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:11"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:14"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:17"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:21"
+    },
+    {
+      "station": "Sanpada",
+      "time": "15:25"
+    },
+    {
+      "station": "Vashi",
+      "time": "15:29"
+    }
+  ],
+  "99241": [
+    {
+      "station": "Thane",
+      "time": "15:05"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:10"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:13"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:16"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:19"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:22"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:26"
+    },
+    {
+      "station": "Juinagar",
+      "time": "15:30"
+    },
+    {
+      "station": "Nerul",
+      "time": "15:35"
+    }
+  ],
+  "99035": [
+    {
+      "station": "Thane",
+      "time": "15:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:41"
+    },
+    {
+      "station": "Juinagar",
+      "time": "15:45"
+    },
+    {
+      "station": "Nerul",
+      "time": "15:49"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "15:53"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "15:57"
+    },
+    {
+      "station": "Kharghar",
+      "time": "16:01"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "16:04"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "16:07"
+    },
+    {
+      "station": "Panvel",
+      "time": "16:12"
+    }
+  ],
+  "99465": [
+    {
+      "station": "Thane",
+      "time": "15:25"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:30"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:33"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:36"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:39"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:42"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:46"
+    },
+    {
+      "station": "Sanpada",
+      "time": "15:50"
+    },
+    {
+      "station": "Vashi",
+      "time": "15:54"
+    }
+  ],
+  "99243": [
+    {
+      "station": "Thane",
+      "time": "15:30"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:35"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:38"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:41"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:44"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:47"
+    },
+    {
+      "station": "Turbhe",
+      "time": "15:51"
+    },
+    {
+      "station": "Juinagar",
+      "time": "15:55"
+    },
+    {
+      "station": "Nerul",
+      "time": "16:00"
+    }
+  ],
+  "99467": [
+    {
+      "station": "Thane",
+      "time": "15:40"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:45"
+    },
+    {
+      "station": "Airoli",
+      "time": "15:48"
+    },
+    {
+      "station": "Rabale",
+      "time": "15:51"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "15:54"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "15:57"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:01"
+    },
+    {
+      "station": "Sanpada",
+      "time": "16:05"
+    },
+    {
+      "station": "Vashi",
+      "time": "16:09"
+    }
+  ],
+  "99469": [
+    {
+      "station": "Thane",
+      "time": "15:52"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "15:57"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:00"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:03"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:06"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:09"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:13"
+    },
+    {
+      "station": "Sanpada",
+      "time": "16:17"
+    },
+    {
+      "station": "Vashi",
+      "time": "16:23"
+    }
+  ],
+  "99037": [
+    {
+      "station": "Thane",
+      "time": "16:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:08"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:11"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:14"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:17"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:21"
+    },
+    {
+      "station": "Juinagar",
+      "time": "16:25"
+    },
+    {
+      "station": "Nerul",
+      "time": "16:29"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "16:33"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "16:37"
+    },
+    {
+      "station": "Kharghar",
+      "time": "16:41"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "16:44"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "16:47"
+    },
+    {
+      "station": "Panvel",
+      "time": "16:52"
+    }
+  ],
+  "99471": [
+    {
+      "station": "Thane",
+      "time": "16:07"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:12"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:15"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:18"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:21"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:24"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:28"
+    },
+    {
+      "station": "Sanpada",
+      "time": "16:32"
+    },
+    {
+      "station": "Vashi",
+      "time": "16:36"
+    }
+  ],
+  "99473": [
+    {
+      "station": "Thane",
+      "time": "16:19"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:24"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:27"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:30"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:33"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:36"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:40"
+    },
+    {
+      "station": "Sanpada",
+      "time": "16:44"
+    },
+    {
+      "station": "Vashi",
+      "time": "16:48"
+    }
+  ],
+  "99039": [
+    {
+      "station": "Thane",
+      "time": "16:24"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:29"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:32"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:35"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:38"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:41"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:45"
+    },
+    {
+      "station": "Juinagar",
+      "time": "16:49"
+    },
+    {
+      "station": "Nerul",
+      "time": "16:53"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "16:57"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "17:01"
+    },
+    {
+      "station": "Kharghar",
+      "time": "17:05"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "17:08"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "17:11"
+    },
+    {
+      "station": "Panvel",
+      "time": "17:16"
+    }
+  ],
+  "99245": [
+    {
+      "station": "Thane",
+      "time": "16:33"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:38"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:41"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:44"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:47"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:50"
+    },
+    {
+      "station": "Turbhe",
+      "time": "16:54"
+    },
+    {
+      "station": "Juinagar",
+      "time": "16:58"
+    },
+    {
+      "station": "Nerul",
+      "time": "17:03"
+    }
+  ],
+  "99475": [
+    {
+      "station": "Thane",
+      "time": "16:40"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:45"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:48"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:51"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "16:54"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "16:57"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:01"
+    },
+    {
+      "station": "Sanpada",
+      "time": "17:06"
+    },
+    {
+      "station": "Vashi",
+      "time": "17:11"
+    }
+  ],
+  "99041": [
+    {
+      "station": "Thane",
+      "time": "16:48"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "16:53"
+    },
+    {
+      "station": "Airoli",
+      "time": "16:56"
+    },
+    {
+      "station": "Rabale",
+      "time": "16:59"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:02"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:05"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:09"
+    },
+    {
+      "station": "Juinagar",
+      "time": "17:13"
+    },
+    {
+      "station": "Nerul",
+      "time": "17:17"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "17:21"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "17:25"
+    },
+    {
+      "station": "Kharghar",
+      "time": "17:29"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "17:32"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "17:35"
+    },
+    {
+      "station": "Panvel",
+      "time": "17:40"
+    }
+  ],
+  "99477": [
+    {
+      "station": "Thane",
+      "time": "16:55"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:00"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:03"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:06"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:09"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:12"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:16"
+    },
+    {
+      "station": "Sanpada",
+      "time": "17:20"
+    },
+    {
+      "station": "Vashi",
+      "time": "17:24"
+    }
+  ],
+  "99247": [
+    {
+      "station": "Thane",
+      "time": "17:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:08"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:11"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:14"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:17"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:21"
+    },
+    {
+      "station": "Juinagar",
+      "time": "17:25"
+    },
+    {
+      "station": "Nerul",
+      "time": "17:30"
+    }
+  ],
+  "99479": [
+    {
+      "station": "Thane",
+      "time": "17:08"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:13"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:16"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:19"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:22"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:25"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:29"
+    },
+    {
+      "station": "Sanpada",
+      "time": "17:33"
+    },
+    {
+      "station": "Vashi",
+      "time": "17:37"
+    }
+  ],
+  "99249": [
+    {
+      "station": "Thane",
+      "time": "17:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "17:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "17:46"
+    }
+  ],
+  "99043": [
+    {
+      "station": "Thane",
+      "time": "17:23"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:28"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:31"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:34"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:37"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:40"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:44"
+    },
+    {
+      "station": "Juinagar",
+      "time": "17:48"
+    },
+    {
+      "station": "Nerul",
+      "time": "17:52"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "17:56"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "18:00"
+    },
+    {
+      "station": "Kharghar",
+      "time": "18:04"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "18:07"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "18:10"
+    },
+    {
+      "station": "Panvel",
+      "time": "18:15"
+    }
+  ],
+  "99481": [
+    {
+      "station": "Thane",
+      "time": "17:28"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:33"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:36"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:39"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:42"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:45"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:49"
+    },
+    {
+      "station": "Sanpada",
+      "time": "17:53"
+    },
+    {
+      "station": "Vashi",
+      "time": "17:57"
+    }
+  ],
+  "99251": [
+    {
+      "station": "Thane",
+      "time": "17:34"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:39"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:42"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:45"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "17:48"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "17:51"
+    },
+    {
+      "station": "Turbhe",
+      "time": "17:55"
+    },
+    {
+      "station": "Juinagar",
+      "time": "17:59"
+    },
+    {
+      "station": "Nerul",
+      "time": "18:04"
+    }
+  ],
+  "99483": [
+    {
+      "station": "Thane",
+      "time": "17:46"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:51"
+    },
+    {
+      "station": "Airoli",
+      "time": "17:54"
+    },
+    {
+      "station": "Rabale",
+      "time": "17:57"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:00"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:03"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:07"
+    },
+    {
+      "station": "Sanpada",
+      "time": "18:11"
+    },
+    {
+      "station": "Vashi",
+      "time": "18:15"
+    }
+  ],
+  "99045": [
+    {
+      "station": "Thane",
+      "time": "17:54"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "17:59"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:02"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:05"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:08"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:11"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:15"
+    },
+    {
+      "station": "Juinagar",
+      "time": "18:19"
+    },
+    {
+      "station": "Nerul",
+      "time": "18:23"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "18:27"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "18:31"
+    },
+    {
+      "station": "Kharghar",
+      "time": "18:35"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "18:38"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "18:41"
+    },
+    {
+      "station": "Panvel",
+      "time": "18:46"
+    }
+  ],
+  "99485": [
+    {
+      "station": "Thane",
+      "time": "18:06"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:11"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:14"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:17"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:20"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:23"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:27"
+    },
+    {
+      "station": "Sanpada",
+      "time": "18:31"
+    },
+    {
+      "station": "Vashi",
+      "time": "18:35"
+    }
+  ],
+  "99047": [
+    {
+      "station": "Thane",
+      "time": "18:10"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:15"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:18"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:21"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:24"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:27"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:31"
+    },
+    {
+      "station": "Juinagar",
+      "time": "18:35"
+    },
+    {
+      "station": "Nerul",
+      "time": "18:39"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "18:43"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "18:46"
+    },
+    {
+      "station": "Kharghar",
+      "time": "18:50"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "18:53"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "18:56"
+    },
+    {
+      "station": "Panvel",
+      "time": "19:01"
+    }
+  ],
+  "99253": [
+    {
+      "station": "Thane",
+      "time": "18:17"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:22"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:25"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:28"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:31"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:34"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:38"
+    },
+    {
+      "station": "Juinagar",
+      "time": "18:42"
+    },
+    {
+      "station": "Nerul",
+      "time": "18:47"
+    }
+  ],
+  "99487": [
+    {
+      "station": "Thane",
+      "time": "18:24"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:29"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:32"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:35"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:38"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:41"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:45"
+    },
+    {
+      "station": "Sanpada",
+      "time": "18:49"
+    },
+    {
+      "station": "Vashi",
+      "time": "18:53"
+    }
+  ],
+  "99255": [
+    {
+      "station": "Thane",
+      "time": "18:29"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:34"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:37"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:40"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:43"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:46"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:50"
+    },
+    {
+      "station": "Juinagar",
+      "time": "18:54"
+    },
+    {
+      "station": "Nerul",
+      "time": "18:59"
+    }
+  ],
+  "99049": [
+    {
+      "station": "Thane",
+      "time": "18:34"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:39"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:42"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:45"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:48"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:51"
+    },
+    {
+      "station": "Turbhe",
+      "time": "18:55"
+    },
+    {
+      "station": "Juinagar",
+      "time": "18:59"
+    },
+    {
+      "station": "Nerul",
+      "time": "19:03"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "19:07"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "19:11"
+    },
+    {
+      "station": "Kharghar",
+      "time": "19:15"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "19:18"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "19:21"
+    },
+    {
+      "station": "Panvel",
+      "time": "19:26"
+    }
+  ],
+  "99489": [
+    {
+      "station": "Thane",
+      "time": "18:42"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:47"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:50"
+    },
+    {
+      "station": "Rabale",
+      "time": "18:53"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "18:56"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "18:59"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:03"
+    },
+    {
+      "station": "Sanpada",
+      "time": "19:07"
+    },
+    {
+      "station": "Vashi",
+      "time": "19:11"
+    }
+  ],
+  "99257": [
+    {
+      "station": "Thane",
+      "time": "18:49"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "18:54"
+    },
+    {
+      "station": "Airoli",
+      "time": "18:57"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:00"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:03"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:06"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:10"
+    },
+    {
+      "station": "Juinagar",
+      "time": "19:14"
+    },
+    {
+      "station": "Nerul",
+      "time": "19:19"
+    }
+  ],
+  "99491": [
+    {
+      "station": "Thane",
+      "time": "18:59"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:04"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:07"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:10"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:13"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:16"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:20"
+    },
+    {
+      "station": "Sanpada",
+      "time": "19:24"
+    },
+    {
+      "station": "Vashi",
+      "time": "19:28"
+    }
+  ],
+  "99051": [
+    {
+      "station": "Thane",
+      "time": "19:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "19:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "19:43"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "19:47"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "19:51"
+    },
+    {
+      "station": "Kharghar",
+      "time": "19:55"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "19:58"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "20:01"
+    },
+    {
+      "station": "Panvel",
+      "time": "20:06"
+    }
+  ],
+  "99493": [
+    {
+      "station": "Thane",
+      "time": "19:19"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:24"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:27"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:30"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:33"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:36"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:40"
+    },
+    {
+      "station": "Sanpada",
+      "time": "19:44"
+    },
+    {
+      "station": "Vashi",
+      "time": "19:48"
+    }
+  ],
+  "99259": [
+    {
+      "station": "Thane",
+      "time": "19:24"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:29"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:32"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:35"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:38"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:41"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:45"
+    },
+    {
+      "station": "Juinagar",
+      "time": "19:49"
+    },
+    {
+      "station": "Nerul",
+      "time": "19:54"
+    }
+  ],
+  "99495": [
+    {
+      "station": "Thane",
+      "time": "19:34"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:39"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:42"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:45"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:48"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:51"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:55"
+    },
+    {
+      "station": "Sanpada",
+      "time": "19:59"
+    },
+    {
+      "station": "Vashi",
+      "time": "20:04"
+    }
+  ],
+  "99261": [
+    {
+      "station": "Thane",
+      "time": "19:38"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:43"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:46"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:49"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "19:52"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "19:55"
+    },
+    {
+      "station": "Turbhe",
+      "time": "19:59"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:03"
+    },
+    {
+      "station": "Nerul",
+      "time": "20:08"
+    }
+  ],
+  "99053": [
+    {
+      "station": "Thane",
+      "time": "19:48"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:53"
+    },
+    {
+      "station": "Airoli",
+      "time": "19:56"
+    },
+    {
+      "station": "Rabale",
+      "time": "19:59"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:02"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:05"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:09"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:13"
+    },
+    {
+      "station": "Nerul",
+      "time": "20:18"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "20:22"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "20:26"
+    },
+    {
+      "station": "Kharghar",
+      "time": "20:30"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "20:33"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "20:36"
+    },
+    {
+      "station": "Panvel",
+      "time": "20:42"
+    }
+  ],
+  "99497": [
+    {
+      "station": "Thane",
+      "time": "19:54"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "19:59"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:02"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:05"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:08"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:11"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:15"
+    },
+    {
+      "station": "Sanpada",
+      "time": "20:19"
+    },
+    {
+      "station": "Vashi",
+      "time": "20:23"
+    }
+  ],
+  "99055": [
+    {
+      "station": "Thane",
+      "time": "19:59"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:04"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:07"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:10"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:13"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:16"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:20"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:24"
+    },
+    {
+      "station": "Nerul",
+      "time": "20:28"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "20:32"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "20:36"
+    },
+    {
+      "station": "Kharghar",
+      "time": "20:40"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "20:43"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "20:46"
+    },
+    {
+      "station": "Panvel",
+      "time": "20:51"
+    }
+  ],
+  "99499": [
+    {
+      "station": "Thane",
+      "time": "20:05"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:10"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:13"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:16"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:19"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:22"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:26"
+    },
+    {
+      "station": "Sanpada",
+      "time": "20:30"
+    },
+    {
+      "station": "Vashi",
+      "time": "20:35"
+    }
+  ],
+  "99057": [
+    {
+      "station": "Thane",
+      "time": "20:15"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:20"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:23"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:26"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:29"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:32"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:36"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:40"
+    },
+    {
+      "station": "Nerul",
+      "time": "20:44"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "20:48"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "20:52"
+    },
+    {
+      "station": "Kharghar",
+      "time": "20:56"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "20:59"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "21:02"
+    },
+    {
+      "station": "Panvel",
+      "time": "21:07"
+    }
+  ],
+  "99263": [
+    {
+      "station": "Thane",
+      "time": "20:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:41"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:45"
+    },
+    {
+      "station": "Nerul",
+      "time": "20:50"
+    }
+  ],
+  "99501": [
+    {
+      "station": "Thane",
+      "time": "20:28"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:33"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:36"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:39"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:42"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:45"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:49"
+    },
+    {
+      "station": "Sanpada",
+      "time": "20:53"
+    },
+    {
+      "station": "Vashi",
+      "time": "20:57"
+    }
+  ],
+  "99265": [
+    {
+      "station": "Thane",
+      "time": "20:33"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:38"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:41"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:44"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:47"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "20:50"
+    },
+    {
+      "station": "Turbhe",
+      "time": "20:54"
+    },
+    {
+      "station": "Juinagar",
+      "time": "20:58"
+    },
+    {
+      "station": "Nerul",
+      "time": "21:03"
+    }
+  ],
+  "99503": [
+    {
+      "station": "Thane",
+      "time": "20:43"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:48"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:51"
+    },
+    {
+      "station": "Rabale",
+      "time": "20:54"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "20:57"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:00"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:04"
+    },
+    {
+      "station": "Sanpada",
+      "time": "21:08"
+    },
+    {
+      "station": "Vashi",
+      "time": "21:12"
+    }
+  ],
+  "99059": [
+    {
+      "station": "Thane",
+      "time": "20:50"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "20:55"
+    },
+    {
+      "station": "Airoli",
+      "time": "20:58"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:01"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:04"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:07"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:11"
+    },
+    {
+      "station": "Juinagar",
+      "time": "21:15"
+    },
+    {
+      "station": "Nerul",
+      "time": "21:19"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "21:23"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "21:27"
+    },
+    {
+      "station": "Kharghar",
+      "time": "21:31"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "21:34"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "21:37"
+    },
+    {
+      "station": "Panvel",
+      "time": "21:42"
+    }
+  ],
+  "99505": [
+    {
+      "station": "Thane",
+      "time": "21:00"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:05"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:08"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:11"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:14"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:17"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:21"
+    },
+    {
+      "station": "Sanpada",
+      "time": "21:25"
+    },
+    {
+      "station": "Vashi",
+      "time": "21:29"
+    }
+  ],
+  "99061": [
+    {
+      "station": "Thane",
+      "time": "21:11"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:16"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:19"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:22"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:25"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:28"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:32"
+    },
+    {
+      "station": "Juinagar",
+      "time": "21:36"
+    },
+    {
+      "station": "Nerul",
+      "time": "21:40"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "21:43"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "21:47"
+    },
+    {
+      "station": "Kharghar",
+      "time": "21:51"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "21:54"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "21:57"
+    },
+    {
+      "station": "Panvel",
+      "time": "22:02"
+    }
+  ],
+  "99507": [
+    {
+      "station": "Thane",
+      "time": "21:20"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:25"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:28"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:31"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:34"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:37"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:41"
+    },
+    {
+      "station": "Sanpada",
+      "time": "21:45"
+    },
+    {
+      "station": "Vashi",
+      "time": "21:49"
+    }
+  ],
+  "99267": [
+    {
+      "station": "Thane",
+      "time": "21:30"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:35"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:38"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:41"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:44"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:47"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:51"
+    },
+    {
+      "station": "Juinagar",
+      "time": "21:56"
+    },
+    {
+      "station": "Nerul",
+      "time": "22:02"
+    }
+  ],
+  "99063": [
+    {
+      "station": "Thane",
+      "time": "21:36"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:41"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:44"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:47"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:50"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:53"
+    },
+    {
+      "station": "Turbhe",
+      "time": "21:57"
+    },
+    {
+      "station": "Juinagar",
+      "time": "22:01"
+    },
+    {
+      "station": "Nerul",
+      "time": "22:05"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "22:09"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "22:13"
+    },
+    {
+      "station": "Kharghar",
+      "time": "22:17"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "22:20"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "22:23"
+    },
+    {
+      "station": "Panvel",
+      "time": "22:28"
+    }
+  ],
+  "99509": [
+    {
+      "station": "Thane",
+      "time": "21:41"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:46"
+    },
+    {
+      "station": "Airoli",
+      "time": "21:49"
+    },
+    {
+      "station": "Rabale",
+      "time": "21:52"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "21:55"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "21:58"
+    },
+    {
+      "station": "Turbhe",
+      "time": "22:02"
+    },
+    {
+      "station": "Sanpada",
+      "time": "22:06"
+    },
+    {
+      "station": "Vashi",
+      "time": "22:10"
+    }
+  ],
+  "99065": [
+    {
+      "station": "Thane",
+      "time": "21:52"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "21:57"
+    },
+    {
+      "station": "Airoli",
+      "time": "22:00"
+    },
+    {
+      "station": "Rabale",
+      "time": "22:03"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "22:06"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "22:09"
+    },
+    {
+      "station": "Turbhe",
+      "time": "22:13"
+    },
+    {
+      "station": "Juinagar",
+      "time": "22:17"
+    },
+    {
+      "station": "Nerul",
+      "time": "22:23"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "22:27"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "22:31"
+    },
+    {
+      "station": "Kharghar",
+      "time": "22:35"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "22:38"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "22:41"
+    },
+    {
+      "station": "Panvel",
+      "time": "22:46"
+    }
+  ],
+  "99511": [
+    {
+      "station": "Thane",
+      "time": "22:01"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "22:06"
+    },
+    {
+      "station": "Airoli",
+      "time": "22:09"
+    },
+    {
+      "station": "Rabale",
+      "time": "22:12"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "22:15"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "22:18"
+    },
+    {
+      "station": "Turbhe",
+      "time": "22:22"
+    },
+    {
+      "station": "Sanpada",
+      "time": "22:26"
+    },
+    {
+      "station": "Vashi",
+      "time": "22:31"
+    }
+  ],
+  "99067": [
+    {
+      "station": "Thane",
+      "time": "22:15"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "22:20"
+    },
+    {
+      "station": "Airoli",
+      "time": "22:23"
+    },
+    {
+      "station": "Rabale",
+      "time": "22:26"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "22:29"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "22:32"
+    },
+    {
+      "station": "Turbhe",
+      "time": "22:36"
+    },
+    {
+      "station": "Juinagar",
+      "time": "22:40"
+    },
+    {
+      "station": "Nerul",
+      "time": "22:44"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "22:48"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "22:52"
+    },
+    {
+      "station": "Kharghar",
+      "time": "22:56"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "22:59"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "23:02"
+    },
+    {
+      "station": "Panvel",
+      "time": "23:07"
+    }
+  ],
+  "99513": [
+    {
+      "station": "Thane",
+      "time": "22:25"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "22:30"
+    },
+    {
+      "station": "Airoli",
+      "time": "22:33"
+    },
+    {
+      "station": "Rabale",
+      "time": "22:36"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "22:39"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "22:42"
+    },
+    {
+      "station": "Turbhe",
+      "time": "22:46"
+    },
+    {
+      "station": "Sanpada",
+      "time": "22:50"
+    },
+    {
+      "station": "Vashi",
+      "time": "22:54"
+    }
+  ],
+  "99515": [
+    {
+      "station": "Thane",
+      "time": "22:45"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "22:50"
+    },
+    {
+      "station": "Airoli",
+      "time": "22:53"
+    },
+    {
+      "station": "Rabale",
+      "time": "22:56"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "22:59"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "23:02"
+    },
+    {
+      "station": "Turbhe",
+      "time": "23:06"
+    },
+    {
+      "station": "Sanpada",
+      "time": "23:10"
+    },
+    {
+      "station": "Vashi",
+      "time": "23:14"
+    }
+  ],
+  "99069": [
+    {
+      "station": "Thane",
+      "time": "22:55"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "23:00"
+    },
+    {
+      "station": "Airoli",
+      "time": "23:03"
+    },
+    {
+      "station": "Rabale",
+      "time": "23:06"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "23:09"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "23:12"
+    },
+    {
+      "station": "Turbhe",
+      "time": "23:16"
+    },
+    {
+      "station": "Juinagar",
+      "time": "23:20"
+    },
+    {
+      "station": "Nerul",
+      "time": "23:24"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "23:28"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "23:32"
+    },
+    {
+      "station": "Kharghar",
+      "time": "23:36"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "23:39"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "23:42"
+    },
+    {
+      "station": "Panvel",
+      "time": "23:47"
+    }
+  ],
+  "99517": [
+    {
+      "station": "Thane",
+      "time": "23:09"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "23:14"
+    },
+    {
+      "station": "Airoli",
+      "time": "23:17"
+    },
+    {
+      "station": "Rabale",
+      "time": "23:20"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "23:23"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "23:26"
+    },
+    {
+      "station": "Turbhe",
+      "time": "23:30"
+    },
+    {
+      "station": "Sanpada",
+      "time": "23:34"
+    },
+    {
+      "station": "Vashi",
+      "time": "23:38"
+    }
+  ],
+  "99071": [
+    {
+      "station": "Thane",
+      "time": "23:14"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "23:19"
+    },
+    {
+      "station": "Airoli",
+      "time": "23:22"
+    },
+    {
+      "station": "Rabale",
+      "time": "23:25"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "23:28"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "23:31"
+    },
+    {
+      "station": "Turbhe",
+      "time": "23:35"
+    },
+    {
+      "station": "Juinagar",
+      "time": "23:39"
+    },
+    {
+      "station": "Nerul",
+      "time": "23:43"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "23:47"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "23:51"
+    },
+    {
+      "station": "Kharghar",
+      "time": "23:55"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "23:58"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "00:01"
+    },
+    {
+      "station": "Panvel",
+      "time": "00:06"
+    }
+  ],
+  "99073": [
+    {
+      "station": "Thane",
+      "time": "23:32"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "23:37"
+    },
+    {
+      "station": "Airoli",
+      "time": "23:40"
+    },
+    {
+      "station": "Rabale",
+      "time": "23:43"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "23:46"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "23:49"
+    },
+    {
+      "station": "Turbhe",
+      "time": "23:53"
+    },
+    {
+      "station": "Juinagar",
+      "time": "23:57"
+    },
+    {
+      "station": "Nerul",
+      "time": "00:01"
+    },
+    {
+      "station": "Seawoods-Darave",
+      "time": "00:05"
+    },
+    {
+      "station": "CBD Belapur",
+      "time": "00:09"
+    },
+    {
+      "station": "Kharghar",
+      "time": "00:13"
+    },
+    {
+      "station": "Mansarovar",
+      "time": "00:16"
+    },
+    {
+      "station": "Khandeshwar",
+      "time": "00:19"
+    },
+    {
+      "station": "Panvel",
+      "time": "00:24"
+    }
+  ],
+  "99519": [
+    {
+      "station": "Thane",
+      "time": "23:45"
+    },
+    {
+      "station": "Digha Gaon",
+      "time": "23:50"
+    },
+    {
+      "station": "Airoli",
+      "time": "23:53"
+    },
+    {
+      "station": "Rabale",
+      "time": "23:56"
+    },
+    {
+      "station": "Ghansoli",
+      "time": "23:59"
+    },
+    {
+      "station": "Kopar Khairane",
+      "time": "00:02"
+    },
+    {
+      "station": "Turbhe",
+      "time": "00:06"
+    },
+    {
+      "station": "Sanpada",
+      "time": "00:10"
+    },
+    {
+      "station": "Vashi",
+      "time": "00:14"
+    }
+  ]
+}

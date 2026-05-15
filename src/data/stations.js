@@ -7,6 +7,7 @@ export const LINES = {
   CENTRAL: { id: 'central', name: 'Central', color: '#f43f5e', shortName: 'CR' },
   HARBOUR: { id: 'harbour', name: 'Harbour', color: '#a78bfa', shortName: 'HR' },
   TRANS_HARBOUR: { id: 'trans-harbour', name: 'Trans-Harbour', color: '#34d399', shortName: 'TH' },
+  URAN: { id: 'uran', name: 'Uran', color: '#f59e0b', shortName: 'UL' },
 };
 
 // Helper to build station objects
@@ -127,7 +128,6 @@ export const stations = [
   S('h_mnkd','Mankhurd','MNKD','harbour',2,[],250,610),
   S('h_vsh','Vashi','VASI','harbour',4,['trans-harbour'],250,585),
   S('h_snpd','Sanpada','SNPD','harbour',2,[],250,560),
-  S('h_trb','Turbhe','TUH','harbour',2,[],250,540),
   S('h_jung','Juinagar','JUNG','harbour',2,[],250,520),
   S('h_nrl','Nerul','NERL','harbour',4,['trans-harbour'],250,500),
   S('h_swd','Seawoods-Darave','SWD','harbour',2,[],250,480),
@@ -232,7 +232,19 @@ export function findRoute(sourceId, destId) {
     
     const start = Math.min(srcIdx, destIdx);
     const end = Math.max(srcIdx, destIdx);
-    const routeStations = lineStations.slice(start, end + 1);
+    let routeStations = lineStations.slice(start, end + 1);
+    
+    // Trans-Harbour Panvel branch bypass
+    if (source.line === 'trans-harbour') {
+      const hasTurbhe = routeStations.some(s => s.code === 'TUH');
+      const hasJuinagar = routeStations.some(s => s.code === 'JUNG');
+      
+      if (hasTurbhe && hasJuinagar) {
+        // Remove Sanpada and Vashi from the route array
+        routeStations = routeStations.filter(s => s.code !== 'SNPD' && s.code !== 'VASI');
+      }
+    }
+
     if (srcIdx > destIdx) routeStations.reverse();
     
     return {

@@ -11,6 +11,9 @@ import RouteMap from './components/RouteMap';
 import CrowdPrediction from './components/CrowdPrediction';
 import LiveAlerts from './components/LiveAlerts';
 import Favorites from './components/Favorites';
+import TimetableAgent from './components/TimetableAgent';
+import TrainTimetable from './components/TrainTimetable';
+import CrowdGPS from './components/CrowdGPS';
 import './App.css';
 
 function AppContent() {
@@ -26,15 +29,19 @@ function AppContent() {
   const [badges, setBadges] = useState({});
   const [alerts, setAlerts] = useState([]);
   const [selectedTrainId, setSelectedTrainId] = useState(null);
+  const [allDay, setAllDay] = useState(false);
+  const [showTimetable, setShowTimetable] = useState(null);
+  const [showCrowdGPS, setShowCrowdGPS] = useState(false);
+  const [trackedTrainNo, setTrackedTrainNo] = useState(null);
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const performSearch = useCallback(async (source, destination) => {
+  const performSearch = useCallback(async (source, destination, isAllDay = false) => {
     if (!source || !destination) return;
     
     setIsLoading(true);
     try {
-      const generatedTrains = await generateTrains(source.id, destination.id, 12);
+      const generatedTrains = await generateTrains(source.id, destination.id, isAllDay ? 200 : 15, null, isAllDay);
       setTrains(generatedTrains);
       
       const generatedInsights = await generateInsights(generatedTrains, source.name, destination.name, generateTrains);
@@ -49,14 +56,22 @@ function AppContent() {
       
       dispatch({ type: 'SET_VIEW', payload: 'results' });
       dispatch({ type: 'ADD_LAST_SEARCH', payload: { source, destination } });
+    } catch (error) {
+      console.error("Search failed:", error);
     } finally {
       setIsLoading(false);
     }
   }, [dispatch]);
 
   const handleSearch = useCallback(() => {
-    performSearch(state.source, state.destination);
-  }, [state.source, state.destination, performSearch]);
+    performSearch(state.source, state.destination, allDay);
+  }, [state.source, state.destination, performSearch, allDay]);
+
+  const toggleAllDay = () => {
+    const nextAllDay = !allDay;
+    setAllDay(nextAllDay);
+    performSearch(state.source, state.destination, nextAllDay);
+  };
 
   const handleFavoriteSelect = useCallback((source, destination) => {
     performSearch(source, destination);
@@ -126,6 +141,16 @@ function AppContent() {
             </div>
           </div>
 
+          {/* Crowd GPS Launch Button */}
+          <button className="crowd-gps-home-btn" onClick={() => { setTrackedTrainNo(null); setShowCrowdGPS(true); }} id="crowd-gps-btn" style={{margin:'12px auto',display:'flex'}}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+            Live Crowd GPS Map
+          </button>
+
           {/* Bottom Tagline */}
           <div className="home-footer">
             <p className="footer-text">Powered by <span className="text-gradient">Manish</span></p>
@@ -162,20 +187,33 @@ function AppContent() {
             </button>
           </div>
 
-          {/* Refresh Button — Top */}
+          {/* Refresh + All Day Toggle Row */}
           <div className="results-refresh-top">
-            <button className="btn btn-ghost refresh-btn" onClick={handleSearch} id="refresh-trains-btn">
+            <button className="btn btn-ghost refresh-btn" onClick={() => handleSearch()} id="refresh-trains-btn">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
                 <path d="M21 3v5h-5"/>
               </svg>
-              Refresh Trains
+              Refresh
+            </button>
+            <button className={`btn ${allDay ? 'btn-primary' : 'btn-ghost'} allday-btn`} onClick={toggleAllDay} id="toggle-allday-btn">
+              <span className="allday-icon">{allDay ? '🕒' : '📅'}</span>
+              {allDay ? 'Showing All Day' : 'Show All Day'}
             </button>
           </div>
 
           {/* Hero Train Card */}
           {heroTrain && (
-            <HeroTrainCard train={heroTrain} badge={badges[heroTrain.id]} insights={insights} />
+            <HeroTrainCard 
+              train={heroTrain} 
+              badge={badges[heroTrain.id]} 
+              insights={insights} 
+              onViewSchedule={() => setShowTimetable(heroTrain)}
+              onTrackLive={(trainNo) => {
+                setTrackedTrainNo(trainNo);
+                setShowCrowdGPS(true);
+              }}
+            />
           )}
 
           {/* Route Map */}
@@ -203,6 +241,7 @@ function AppContent() {
               setSelectedTrainId(t.id);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }} 
+            onViewSchedule={(t) => setShowTimetable(t)}
           />
 
           {/* Crowd Prediction */}
@@ -210,6 +249,16 @@ function AppContent() {
           
           <div className="version-indicator">v2.0 Interchange Active</div>
         </main>
+      )}
+      <TimetableAgent />
+      {showTimetable && (
+        <TrainTimetable train={showTimetable} onClose={() => setShowTimetable(null)} />
+      )}
+      {showCrowdGPS && (
+        <CrowdGPS 
+          onClose={() => setShowCrowdGPS(false)} 
+          trackedTrainNo={trackedTrainNo}
+        />
       )}
     </div>
   );

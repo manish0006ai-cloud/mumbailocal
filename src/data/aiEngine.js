@@ -1,4 +1,4 @@
-import { getStation, getStationsOnLine, findRoute, LINES, getLineInfo } from './stations';
+import { getStation, getStationsOnLine, findRoute, LINES, getLineInfo, stations } from './stations';
 
 // AI Recommendation Engine for Mumbai Local Trains
 // Provides intelligent suggestions based on train data and conditions
@@ -366,6 +366,189 @@ export function parseVoiceQuery(text) {
   return null;
 }
 
+// Process natural language queries for the Timetable Agent
+export async function processAgentQuery(text, timetableData) {
+  if (!text) return { message: "How can I help you with the Mumbai Local timetable today?" };
+  
+  const lower = text.toLowerCase();
+  
+  // Improved station matching
+  const foundStations = [];
+  const queryWords = lower.split(/[\s,]+/);
+  
+  stations.forEach(s => {
+    const sName = s.name.toLowerCase();
+    const sCode = s.code.toLowerCase();
+    
+    // 1. Direct match in query
+    if (lower.includes(sName) || lower.includes(sCode)) {
+      foundStations.push(s);
+      return;
+    }
+    
+    // 2. Word-based match (e.g. "Kalyan" matches "Kalyan Junction")
+    // Only match if the word is long enough to avoid false positives (e.g. "V" for Vashi)
+    if (queryWords.some(w => w.length > 3 && (sName.startsWith(w) || sName.includes(" " + w)))) {
+      foundStations.push(s);
+    }
+  });
+
+  // Unique stations by name to avoid duplicates from different lines
+  const uniqueStations = [];
+  const seenNames = new Set();
+  foundStations.forEach(s => {
+    if (!seenNames.has(s.name.toLowerCase())) {
+      seenNames.add(s.name.toLowerCase());
+      uniqueStations.push(s);
+    }
+  });
+
+  // 2. Identify Intent
+  const isLastTrainQuery = lower.includes('last') || lower.includes('aakhri');
+  const isFirstTrainQuery = lower.includes('first') || lower.includes('pehli');
+  const isFastQuery = lower.includes('fast') || lower.includes('express') || lower.includes('tej');
+  const isSlowQuery = lower.includes('slow') || lower.includes('dheemi');
+  
+  // 3. Handle Source/Destination
+  let source = null;
+  let destination = null;
+
+  if (uniqueStations.length >= 2) {
+    // Try to determine order (from X to Y)
+    const fromIdx = lower.indexOf('from');
+    const toIdx = lower.indexOf('to');
+    const seIdx = lower.indexOf(' se ');
+    
+    if (fromIdx !== -1 && toIdx !== -1) {
+      const s1 = uniqueStations.find(s => lower.indexOf(s.name.toLowerCase()) >= fromIdx && lower.indexOf(s.name.toLowerCase()) < toIdx);
+      const s2 = uniqueStations.find(s => lower.indexOf(s.name.toLowerCase()) >= toIdx);
+      if (s1 && s2) { source = s1; destination = s2; }
+    } else if (seIdx !== -1) {
+       // Hindi "X se Y"
+       source = uniqueStations.find(s => lower.indexOf(s.name.toLowerCase()) < seIdx);
+       destination = uniqueStations.find(s => lower.indexOf(s.name.toLowerCase()) > seIdx);
+    }
+    
+    // Fallback: just pick the first two found if order is unclear
+    if (!source) {
+      source = uniqueStations[0];
+      destination = uniqueStations[1];
+    }
+  } else if (uniqueStations.length === 1) {
+    // Only one station mentioned, maybe "trains to X" or "trains from X"
+    if (lower.includes(' to ') || lower.includes('ko ') || lower.includes('taraf')) {
+      destination = uniqueStations[0];
+      // Default source for major lines if heading to terminus or away
+      if (destination.line === 'western') source = getStation('cg'); // Churchgate
+      else if (destination.line === 'central') source = getStation('csmt'); // CSMT
+      else if (destination.line === 'harbour') source = getStation('h_csmt'); // Harbour CSMT
+    } else {
+      source = uniqueStations[0];
+    }
+  }
+
+  if (!source && !destination) {
+    return { 
+      message: "I couldn't quite catch the stations. Which route are you looking for? (e.g., 'Trains from Borivali to Churchgate')" 
+    };
+  }
+
+  // 4. Query Timetable using accurate CSV-parsed data
+  // The new format: timetableData = { metadata, trains: [{ trainNo, line, direction, type, stops: [{ station, time }] }] }
+  const trainsList = timetableData.trains || timetableData;
+  const results = [];
+
+  // Helper: fuzzy match a station object against a timetable stop name
+  const matchesStop = (appStation, stopName) => {
+    const sn = stopName.toLowerCase().replace(/['.()]/g, '');
+    const an = appStation.name.toLowerCase().replace(/['.()]/g, '');
+    const ac = appStation.code.toLowerCase();
+    // Direct match
+    if (sn === an || sn.includes(an) || an.includes(sn)) return true;
+    // Code match
+    if (sn === ac) return true;
+    // Partial word match (e.g. "churchgate" matches "CHURCHGATE", "borivali" matches "BORIVALI")
+    const snWords = sn.split(/\s+/);
+    const anWords = an.split(/\s+/);
+    if (anWords.some(w => w.length > 3 && snWords.some(sw => sw.includes(w) || w.includes(sw)))) return true;
+    // Special cases
+    if (an.includes('mumbai central') && sn.includes('bai central')) return true;
+    if (an === 'csmt' && (sn.includes('csmt') || sn.includes('mumbai csmt'))) return true;
+    return false;
+  };
+
+  if (source && destination) {
+    for (const t of trainsList) {
+      const sIdx = t.stops.findIndex(s => matchesStop(source, s.station));
+      const dIdx = t.stops.findIndex(s => matchesStop(destination, s.station));
+      
+      if (sIdx !== -1 && dIdx !== -1 && sIdx < dIdx) {
+        const isFast = t.type === 'Fast';
+        
+        if (isFastQuery && !isFast) continue;
+        if (isSlowQuery && isFast) continue;
+        
+        results.push({
+          id: t.trainNo,
+          departure: t.stops[sIdx].time,
+          arrival: t.stops[dIdx].time,
+          isFast,
+          line: t.line,
+          stopsCount: dIdx - sIdx
+        });
+      }
+    }
+  } else if (source) {
+     return { message: `Where would you like to go from ${source.name}?` };
+  } else if (destination) {
+     return { message: `Where are you starting from to go to ${destination.name}?` };
+  }
+
+  if (results.length === 0) {
+    return { message: `I couldn't find any direct trains from ${source.name} to ${destination.name} in my records.` };
+  }
+
+  // Sort by departure time
+  results.sort((a, b) => a.departure.localeCompare(b.departure));
+
+  // 5. Format Response
+  if (isLastTrainQuery) {
+    const last = results[results.length - 1];
+    return {
+      message: `🚂 The **last train** from ${source.name} to ${destination.name} departs at **${last.departure}** (arrives ${last.arrival}). Train #${last.id} — ${last.isFast ? '⚡ Fast' : '🐌 Slow'}.`,
+      data: [last]
+    };
+  }
+
+  if (isFirstTrainQuery) {
+    const first = results[0];
+    return {
+      message: `🚂 The **first train** from ${source.name} to ${destination.name} departs at **${first.departure}** (arrives ${first.arrival}). Train #${first.id} — ${first.isFast ? '⚡ Fast' : '🐌 Slow'}.`,
+      data: [first]
+    };
+  }
+
+  // Next trains based on current time
+  const now = new Date();
+  const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+  const upcoming = results.filter(r => r.departure >= currentTime).slice(0, 5);
+
+  if (upcoming.length === 0) {
+    return {
+      message: `No more trains today from ${source.name} to ${destination.name}. First tomorrow: **${results[0].departure}** (Train #${results[0].id}).`,
+      data: [results[0]]
+    };
+  }
+
+  const list = upcoming.map(u => `• **${u.departure}** → ${u.arrival} — ${u.isFast ? '⚡Fast' : '🐌Slow'} (Train #${u.id})`).join('\n');
+  const total = results.length;
+  return {
+    message: `🚉 Next trains from **${source.name}** to **${destination.name}** (${total} total today):\n\n${list}`,
+    data: upcoming
+  };
+}
+
+
 // Crowd prediction over time
 export function getCrowdTimeline() {
   const timeline = [];
@@ -387,3 +570,4 @@ export function getCrowdTimeline() {
   }
   return timeline;
 }
+

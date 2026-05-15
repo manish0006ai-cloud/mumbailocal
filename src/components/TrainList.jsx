@@ -1,6 +1,6 @@
 import './TrainList.css';
 
-export default function TrainList({ trains, badges, onTrainSelect }) {
+export default function TrainList({ trains, badges, onTrainSelect, onViewSchedule }) {
   if (!trains || trains.length === 0) return null;
 
   const crowdConfig = {
@@ -46,6 +46,16 @@ export default function TrainList({ trains, badges, onTrainSelect }) {
                     <span className="train-num-display">{train.number}</span>
                   </div>
                   <div className="train-badges-row">
+                    <button 
+                      className="list-schedule-btn" 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onViewSchedule?.(train);
+                      }}
+                      title="View full schedule"
+                    >
+                      🕒
+                    </button>
                     <span className={`badge-sm ${train.isFast ? 'badge-sm-fast' : 'badge-sm-slow'}`}>
                       {train.isFast ? 'FAST' : 'SLOW'}
                     </span>

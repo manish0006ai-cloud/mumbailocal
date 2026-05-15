@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Active Sessions — anonymous GPS pings
+    match /active_sessions/{sessionId} {
+      // Anyone can write their own anonymous session
+      allow create: if request.resource.data.keys().hasAll(['lat', 'lng', 'speed', 'direction', 'timestamp', 'probable_line'])
+                    && request.resource.data.lat is number
+                    && request.resource.data.lng is number
+                    && request.resource.data.speed is number
+                    && request.resource.data.direction is number;
+      // Only the session creator can update (matched by session ID in the doc)
+      allow update: if request.resource.data.diff(resource.data).affectedKeys()
+                      .hasOnly(['lat', 'lng', 'speed', 'direction', 'timestamp', 'probable_line', 'confidence']);
+      // Anyone can read aggregate data
+      allow read: if true;
+      // Deletion by TTL cloud function only
+      allow delete: if false;
+    }
+
+    // Movement Clusters — aggregated train positions
+    match /movement_clusters/{clusterId} {
+      allow read: if true;
+      // Only cloud functions can write
+      allow write: if false;
+    }
+
+    // Crowd Snapshots — periodic aggregated crowd levels
+    match /crowd_snapshots/{snapshotId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Railway Events — delays, disruptions
+    match /railway_events/{eventId} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}

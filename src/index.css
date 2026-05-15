@@ -16,6 +16,10 @@
   --bg-glass: rgba(15, 23, 42, 0.6);
   --bg-glass-strong: rgba(15, 23, 42, 0.85);
   
+  /* Primary Branding */
+  --primary-color: #00d4ff;
+  --primary-gradient: linear-gradient(135deg, #00d4ff, #a78bfa);
+  
   /* Accent Colors */
   --accent-blue: #00d4ff;
   --accent-cyan: #22d3ee;

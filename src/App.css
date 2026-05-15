@@ -170,17 +170,30 @@
   color: var(--accent-yellow);
 }
 
-/* Refresh Button — Top */
+/* Refresh + All Day Toggle — Top */
 .results-refresh-top {
   display: flex;
   justify-content: flex-end;
+  gap: var(--space-xs);
   margin-bottom: var(--space-sm);
   animation: fade-in 0.4s ease;
 }
 
-.refresh-btn {
+.refresh-btn, .allday-btn {
   gap: 8px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  height: 34px;
+}
+
+.allday-icon {
+  font-size: 0.9rem;
+}
+
+.allday-btn.btn-primary {
+  background: var(--accent-cyan);
+  color: var(--bg-primary);
+  box-shadow: 0 4px 12px rgba(34, 211, 238, 0.2);
 }
 
 .version-indicator {
